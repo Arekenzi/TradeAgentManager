@@ -1,0 +1,17 @@
+TradeAgent Manager v25.0.11 — PWA LOGIN DIRECT
+
+Scope of this release:
+- ONLY PWA/Home Screen login reliability was changed from v25.0.10.
+- UI/layout/catalog/data model/roles/migration behavior are not intentionally changed.
+- PWA no longer depends on delayed onAuthStateChanged to complete an explicit login.
+- PWA loginDirectory is read directly first, avoiding a pre-login Firestore SDK stall.
+
+Verification before declaring STABLE:
+1. Safari login succeeds.
+2. Fresh Home Screen install login succeeds.
+3. Catalog opens immediately after valid code.
+4. Correct role/user is shown.
+5. Orders/history/stock remain present.
+6. Re-open Home Screen app and login again.
+
+Do not modify this build after verification. Create a stable tag/checkpoint instead.
