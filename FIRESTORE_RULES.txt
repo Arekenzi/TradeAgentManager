@@ -43,6 +43,19 @@ service cloud.firestore {
       allow delete: if admin();
     }
 
+    match /sequences/{id} {
+      allow read: if active();
+      allow create: if active() && (admin() || request.resource.data.appId == me().appId);
+      allow update: if active() && (admin() || (resource.data.appId == me().appId && request.resource.data.appId == resource.data.appId));
+      allow delete: if admin();
+    }
+
+    match /presence/{appId} {
+      allow read: if active();
+      allow create, update: if active() && (admin() || request.resource.data.appId == me().appId) && request.resource.data.appId == appId;
+      allow delete: if admin() || (active() && appId == me().appId);
+    }
+
     match /photos/{id} {
       allow read: if active();
       allow write: if admin();
