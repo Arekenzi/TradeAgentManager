@@ -1,0 +1,10 @@
+Trade Agent Manager 27.0.1 — Brand/UI Regression Fix
+
+Changed file: index.html only (plus this release note).
+- Removed duplicate desktop sidebar pseudo-brand.
+- Restored controlled neon/olive brand visibility.
+- Restored centered animated T on mobile login.
+- Realigned mobile login brand row.
+- Centered mobile bottom-nav active indicators.
+- Restored subtle About/System logo animation.
+- No auth, data, sync, routing, catalog/order logic or global scroll contracts changed.
