@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="25.3.9">
+<meta name="app-version" content="25.3.10">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Trade Agent Manager">
@@ -2792,7 +2792,7 @@ button,input,select,textarea{max-width:100%}
     <div class="ref-login-brand">
       <div class="ref-login-mini"><svg class="ta-ref-svg" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="tgA" x1="14" y1="10" x2="52" y2="28"><stop stop-color="#edff8d"/><stop offset=".54" stop-color="#cce76b"/><stop offset="1" stop-color="#a1bd48"/></linearGradient><linearGradient id="tgB" x1="18" y1="14" x2="30" y2="34"><stop stop-color="#b8cf57"/><stop offset="1" stop-color="#7f9932"/></linearGradient><linearGradient id="tgC" x1="30" y1="28" x2="32" y2="58"><stop stop-color="#d9ed73"/><stop offset="1" stop-color="#9fb93e"/></linearGradient></defs><path d="M10 25 18 12 32 25 27 31Z" fill="url(#tgB)"/><path d="M18 12 55 13 46 27 32 25Z" fill="url(#tgA)"/><path d="M27 31 38 27 38 50 27 58Z" fill="url(#tgC)"/><path d="M32 25 46 27 38 31 27 31Z" fill="#efff91" opacity=".34"/></svg></div>
       <div class="ref-login-word"><b>TRADE AGENT</b><span>MANAGER</span></div>
-      <i id="loginVersion">v25.3.9</i>
+      <i id="loginVersion">v25.3.10</i>
     </div>
     <div class="ref-login-hero">
       <div class="ref-orbit orbit-a"></div><div class="ref-orbit orbit-b"></div><div class="ref-orbit-dot d1"></div><div class="ref-orbit-dot d2"></div>
@@ -2817,7 +2817,7 @@ button,input,select,textarea{max-width:100%}
       <button class="lbtn loff hide" id="lOffline">Продолжить офлайн</button>
       <button id="lCfg" class="login-config">Настроить базу</button>
     </div>
-    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v25.3.9</span></div>
+    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v25.3.10</span></div>
   </div>
 </div>
 <script id="ta2538-login-x-gesture-lock">
@@ -5018,8 +5018,16 @@ async function readStock(f){
     const p=parseStock(text);
     if(!p.count){ toast('Не удалось разобрать файл'); return; }
     DB.stock={date:p.date||new Date().toLocaleDateString('ru-RU'),map:p.map,at:Date.now()};
-    save(); enqueue('stock.set',{stock:DB.stock}); recalcUsed(); render();
-    toast(`Остатки обновлены: ${p.count} позиций`);
+    save(); recalcUsed(); render();
+    /* Раньше «Остатки обновлены» показывалось сразу, не дожидаясь реальной записи
+       на сервер — если запись не проходила, никто об этом не узнавал, и при
+       следующем обновлении с сервера свежие остатки тихо откатывались назад. */
+    try{
+      await enqueue('stock.set',{stock:DB.stock});
+      toast(`Остатки обновлены: ${p.count} позиций`);
+    }catch(e){
+      toast('Остатки сохранены на этом устройстве, но не отправлены в общую базу: '+String(e&&e.message||e).slice(0,90));
+    }
   }catch(e){ toast('Ошибка чтения. Нужен интернет для разбора .xls'); }
 }
 /* Библиотеки подгружаются только когда действительно нужны */
@@ -6840,13 +6848,14 @@ function ta24PhotoCompress(file){
 }
 async function ta24PhotoSaveMap(sku){
   DB.photos=DB.photos||{}; DB.photosAt=Date.now(); save();
-  enqueue('photo.set',{sku:String(sku),value:DB.photos[String(sku)]||null});
   ta23PaintProducts();
-  /* Photo changes must be confirmed by the server. Do not silently keep a local-only image. */
+  /* Раньше здесь запись (enqueue) не дожидалась подтверждения, а следом сразу
+     шёл pull() — полное обновление с сервера. Если запись ещё не успела дойти,
+     pull() читал СТАРЫЕ данные и стирал только что загруженное фото прямо
+     на этом же устройстве. Теперь ждём реальной записи и не запрашиваем
+     принудительное обновление — его подхватит обычный realtime-слушатель. */
   try{
-    await flush(true);
-    REV=-1;
-    await pull();
+    await enqueue('photo.set',{sku:String(sku),value:DB.photos[String(sku)]||null});
     ta23PaintProducts();
     return true;
   }catch(e){
@@ -7298,8 +7307,8 @@ async function fbPullAll(){
 }
 /* Firestore writes. Draft/local UI saves do NOT rewrite stock/settings anymore. */
 enqueue=function(type,payload){
-  if(!FB_READY||!FBAUTH||!FBAUTH.currentUser)return;
-  Promise.resolve().then(async()=>{
+  if(!FB_READY||!FBAUTH||!FBAUTH.currentUser)return Promise.resolve(false);
+  return Promise.resolve().then(async()=>{
     if(type==='order.save'||type.startsWith('payment.')||type.startsWith('return.'))await fbPushOrder(payload.id||(payload.order&&payload.order.id));
     else if(type==='order.delete'){if(!isAdmin())throw new Error('Удалять заявки может только администратор');await FBDB.collection('orders').doc(fbSafeId(payload.id)).delete();if(payload.uid)await fbPushUsage(payload.uid);else await fbPushAllUsage()}
     else if(type==='stock.set'){if(!isAdmin())throw new Error('Остатки меняет администратор');await FBDB.collection('state').doc('stock').set({value:fbClean(DB.stock),updatedAt:Date.now()});await fbPushAllUsage()}
