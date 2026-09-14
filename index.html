@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="25.3.10">
+<meta name="app-version" content="25.3.11">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Trade Agent Manager">
@@ -2201,6 +2201,24 @@ button,input,select,textarea{max-width:100%}
     padding:5px 8px!important;
     border-radius:8px!important;
   }
+  .ref-stockrow{
+    display:flex!important;
+    align-items:center!important;
+    gap:6px!important;
+    margin:0 0 7px!important;
+  }
+  .ref-stockrow .ref-stock{margin:0!important}
+  .ref-qty{
+    font-family:var(--mono,ui-monospace,monospace);
+    font-size:8px!important;
+    font-weight:700!important;
+    color:var(--ink2,#c7d1c4)!important;
+    background:rgba(255,255,255,.05)!important;
+    border:1px solid rgba(255,255,255,.09)!important;
+    border-radius:8px!important;
+    padding:5px 8px!important;
+    white-space:nowrap;
+  }
   .ref-card-v3 .ref-pname{
     position:static!important;
     padding:0!important;margin:0!important;
@@ -2792,7 +2810,7 @@ button,input,select,textarea{max-width:100%}
     <div class="ref-login-brand">
       <div class="ref-login-mini"><svg class="ta-ref-svg" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="tgA" x1="14" y1="10" x2="52" y2="28"><stop stop-color="#edff8d"/><stop offset=".54" stop-color="#cce76b"/><stop offset="1" stop-color="#a1bd48"/></linearGradient><linearGradient id="tgB" x1="18" y1="14" x2="30" y2="34"><stop stop-color="#b8cf57"/><stop offset="1" stop-color="#7f9932"/></linearGradient><linearGradient id="tgC" x1="30" y1="28" x2="32" y2="58"><stop stop-color="#d9ed73"/><stop offset="1" stop-color="#9fb93e"/></linearGradient></defs><path d="M10 25 18 12 32 25 27 31Z" fill="url(#tgB)"/><path d="M18 12 55 13 46 27 32 25Z" fill="url(#tgA)"/><path d="M27 31 38 27 38 50 27 58Z" fill="url(#tgC)"/><path d="M32 25 46 27 38 31 27 31Z" fill="#efff91" opacity=".34"/></svg></div>
       <div class="ref-login-word"><b>TRADE AGENT</b><span>MANAGER</span></div>
-      <i id="loginVersion">v25.3.10</i>
+      <i id="loginVersion">v25.3.11</i>
     </div>
     <div class="ref-login-hero">
       <div class="ref-orbit orbit-a"></div><div class="ref-orbit orbit-b"></div><div class="ref-orbit-dot d1"></div><div class="ref-orbit-dot d2"></div>
@@ -2817,7 +2835,7 @@ button,input,select,textarea{max-width:100%}
       <button class="lbtn loff hide" id="lOffline">Продолжить офлайн</button>
       <button id="lCfg" class="login-config">Настроить базу</button>
     </div>
-    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v25.3.10</span></div>
+    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v25.3.11</span></div>
   </div>
 </div>
 <script id="ta2538-login-x-gesture-lock">
@@ -6696,7 +6714,7 @@ function ta23ProductCard(p){
     <div class="ref-product-main">
       <div class="ref-art">${ta23ProductArt(p)}</div>
       <div class="ref-content">
-        <span class="ref-stock${isNew?' new':''}">${isNew?'Новинка':st>0?'В наличии':'Нет в наличии'}</span>
+        <div class="ref-stockrow"><span class="ref-stock${isNew?' new':''}">${isNew?'Новинка':st>0?'В наличии':'Нет в наличии'}</span>${st>0?`<span class="ref-qty">${st} шт</span>`:''}</div>
         <div class="ref-pname" title="${esc(p.n)}">${esc(p.n)}</div>
         <div class="ref-brand">${esc(ta23BrandOf(p))}</div>
         <div class="ref-sku">SKU ${esc(p.a)}</div>
