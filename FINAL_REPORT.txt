@@ -1,0 +1,102 @@
+TRADE AGENT MANAGER 27.0.0 — FINAL IMPLEMENTATION REPORT
+
+1. FILES CHANGED / CREATED
+- index.html (Manager only)
+- manifest.webmanifest
+- final T asset family, favicon/PWA icon family, geometry freeze files, release notes/checksums
+- Trade Agent Desktop: NOT TOUCHED
+
+2. BRAND ASSETS
+- 01_TradeAgent-T-Master.svg
+- 02_TradeAgent-T-Dark.svg
+- 03_TradeAgent-T-Neon.svg
+- 04_TradeAgent-T-Monochrome-Light.svg
+- 05_TradeAgent-T-Monochrome-Dark.svg
+- 06_TradeAgent-T-Outline.svg
+- 07_TradeAgent-T-Small.svg
+- TradeAgent-AppIcon-Master.svg / TradeAgent-AppIcon-Maskable.svg
+- brand-mark.svg / brand-glyph.svg compatibility aliases
+
+3. MASTER T
+- Geometry source files: 01_master-t-silhouette_LOCKED.svg and 02_master-t-facets_LOCKED.svg
+- Production master: 01_TradeAgent-T-Master.svg
+- Exact locked outer/facet coordinates are documented in GEOMETRY_FREEZE.txt
+
+4. REUSABLE ANIMATION COMPONENT
+- index.html: function TradeAgentBrandMark(opts={})
+- CSS animation system: style#ta2700-brand-experience
+- Used on Login; all normal brand placements are static after render.
+
+5. ANIMATION TIMING
+- WAKE: 0–180ms
+- FACETS: 150–430ms
+- MATERIAL: 350–650ms
+- LIGHT PASS: 520–820ms
+- NEON IGNITION: 700–950ms
+- SETTLE: complete/static by ~950–1100ms
+- No infinite logo animation.
+
+6. REDUCED MOTION
+- prefers-reduced-motion: ~180ms fade only; facets/material/edge animation disabled.
+
+7. ICON SIZES
+- favicon: 16/32/48 PNG + favicon.svg
+- PWA/iOS: 72/96/128/144/152/180/192/384/512 PNG
+- apple-touch-icon.png: 180x180
+- maskable: 192/512
+
+8. MANIFEST
+- start_url/scope/display preserved
+- icon URLs cache-busted with v=27.0.0
+- maskable icons added with safe zone
+- no service-worker/startup logic added or rewritten
+
+9. SCREENS REDESIGNED
+- Login
+- App shell/Header
+- Desktop and mobile navigation
+- Home
+- Catalog
+- Orders/order cards
+- Debts/payments surfaces
+- Clients/table surfaces
+- Admin/More/System
+- Sheets/modals/order-action sheets
+- Inputs/buttons/status chips/toasts/empty states
+
+10. OLD BRANDING
+- Login old inline marks replaced.
+- TA22MARK / TA23MARK / TA25_TMARK now use the same TradeAgentBrandMark source.
+- brand-mark.svg and brand-glyph.svg point to the locked final geometry.
+- Historical single-file CSS from older releases remains in the baseline for regression safety, but final 27.0.0 overrides control runtime visuals.
+
+11. ANDROID SCROLL
+- Existing Android #app scroll-host block retained unchanged.
+- 27.0.0 visual layer adds no global overflow-y/position/touch-action scroll rewrite.
+- Static regression check PASS. Physical Android device test is still required after deployment.
+
+12. IPHONE SCROLL / SAFE AREA
+- Existing iOS/mobile scroll and safe-area contracts not rewritten.
+- Static regression check PASS. Physical iPhone test is still required after deployment.
+
+13. LOGIN HORIZONTAL LOCK
+- Existing login-local touch guard retained.
+- New Login CSS remains local to #login and does not use global body/html fixed/overflow hacks.
+
+14. PWA / BROWSER
+- Manifest parses and required icon files exist at declared sizes.
+- Browser/PWA startup/auth logic unchanged.
+- Automated physical installed-PWA launch cannot be performed in this container; verify Android/iPhone after GitHub Pages deployment.
+
+15. BUILD / TEST RESULT
+- HTML parsed with BeautifulSoup.
+- 5 inline JavaScript blocks checked with node --check: 0 syntax errors.
+- Frozen geometry path equality check: PASS for Master/Dark/Neon/Small/brand-mark.
+- Production PNG dimensions check: PASS.
+- Existing Android scroll bridge, login lock, bonus logic and Firebase code present.
+- Headless Chromium full runtime smoke could not complete in this environment, so no claim of physical-browser/PWA testing is made.
+
+KNOWN REMAINING QA
+- Deploy all files, not only index.html.
+- On Android/iPhone installed PWA, old home-screen icon can remain cached by the OS; if so, remove/reinstall the PWA after deployment.
+- Perform real-device checks at 320/360/375/390/412/430 widths.

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <!-- PHASE 0.1 — INTERNAL FACETS ONLY. OUTER SILHOUETTE V2 IS LOCKED. -->
+  <defs>
+    <clipPath id="topClip">
+      <!-- LOCKED V2 OUTER PATH: DO NOT EDIT -->
+      <path d="M100 270 L250 110 L900 110 L738 270 Z"/>
+    </clipPath>
+    <clipPath id="stemClip">
+      <!-- LOCKED V2 OUTER PATH: DO NOT EDIT -->
+      <path d="M395 296 L510 296 C548 296 578 326 578 360 L578 644 L395 818 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- TOP BAR: locked contour, neutral main plane -->
+  <path fill="#D8D8D8" d="M100 270 L250 110 L900 110 L738 270 Z"/>
+  <!-- LEFT FOLDED FACET: internal only -->
+  <path clip-path="url(#topClip)" fill="#555555" d="M100 270 L250 110 L525 270 Z"/>
+
+  <!-- STEM: locked contour, neutral upper/main plane -->
+  <path fill="#B8B8B8" d="M395 296 L510 296 C548 296 578 326 578 360 L578 644 L395 818 Z"/>
+  <!-- STEM FOLDED FACET: internal only; diagonal from curved upper-right zone to left edge -->
+  <path clip-path="url(#stemClip)" fill="#686868" d="M570 354 L578 360 L578 644 L395 818 L395 505 Z"/>
+</svg>
