@@ -8,13 +8,13 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="27.0.1">
+<meta name="app-version" content="27.0.4">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Trade Agent Manager">
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=27.0.4">
-<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=27.0.4">
-<link rel="manifest" href="./manifest.webmanifest?v=27.0.4">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=27.0.3">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=27.0.3">
+<link rel="manifest" href="./manifest.webmanifest?v=27.0.3">
 <meta name="author" content="Артур Кудинов">
 <meta name="copyright" content="© 2026 Артур Кудинов. All rights reserved.">
 <meta name="application-name" content="Trade Agent Manager">
@@ -3033,7 +3033,7 @@ button,input,select,textarea{max-width:100%}
 
 
 <style id="ta2603-desktop-system-rail">
-/* v27.0.4 — desktop system actions only. Mobile navigation remains untouched. */
+/* v27.0.3 — desktop system actions only. Mobile navigation remains untouched. */
 @media (min-width:1024px){
   #tabs .ta26-rail-system{display:flex;flex-direction:column;gap:4px;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.055)}
   #tabs .ta26-rail-system button{height:44px!important;min-height:44px!important;width:100%!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;padding:0 12px!important;border-radius:12px!important;color:#8f9b91!important;font-size:13px!important;font-weight:620!important;transition:background .18s ease,color .18s ease,transform .16s ease!important}
@@ -3115,24 +3115,20 @@ main,#view{background:transparent!important}
 .ta-brand-glint-soft{filter:blur(.45px)}
 .ta-brand-lightpass{stroke-dasharray:22 78;stroke-dashoffset:28}
 /* Premium dark-metal startup + controlled specular light pass. */
-.ta-brand-animated{opacity:1;transform:none;animation:taMetalWakeSafe 250ms cubic-bezier(.22,1,.36,1) 0ms 1 both}
-.ta-brand-animated .ta-brand-top{opacity:1;animation:taMetalFacetInSafe 230ms cubic-bezier(.22,1,.36,1) 250ms 1 both}
-.ta-brand-animated .ta-brand-left{opacity:1;animation:taMetalFacetInSafe 220ms cubic-bezier(.22,1,.36,1) 300ms 1 both}
-.ta-brand-animated .ta-brand-stem{opacity:1;animation:taMetalFacetInSafe 220ms cubic-bezier(.22,1,.36,1) 350ms 1 both}
-.ta-brand-animated .ta-brand-stem-fold{opacity:1;animation:taMetalFacetInSafe 220ms cubic-bezier(.22,1,.36,1) 410ms 1 both}
-.ta-brand-animated .ta-brand-sheen{opacity:.16;animation:taMetalMaterialInSafe 260ms cubic-bezier(.22,1,.36,1) 340ms 1 both}
-.ta-brand-animated .ta-brand-material{opacity:.72;animation:taMetalMaterialInSafe 240ms cubic-bezier(.22,1,.36,1) 360ms 1 both}
-.ta-brand-animated .ta-brand-edge{opacity:1;animation:taMetalEdgeSettleSafe 180ms ease-out 1090ms 1 both}
+.ta-brand-animated{opacity:0;transform:translateY(2px);animation:taMetalWake 250ms cubic-bezier(.22,1,.36,1) 0ms 1 forwards}
+.ta-brand-animated .ta-brand-top{opacity:0;animation:taMetalFacetIn 230ms cubic-bezier(.22,1,.36,1) 250ms 1 forwards}
+.ta-brand-animated .ta-brand-left{opacity:0;animation:taMetalFacetIn 220ms cubic-bezier(.22,1,.36,1) 300ms 1 forwards}
+.ta-brand-animated .ta-brand-stem{opacity:0;animation:taMetalFacetIn 220ms cubic-bezier(.22,1,.36,1) 350ms 1 forwards}
+.ta-brand-animated .ta-brand-stem-fold{opacity:0;animation:taMetalFacetIn 220ms cubic-bezier(.22,1,.36,1) 410ms 1 forwards}
+.ta-brand-animated .ta-brand-sheen{opacity:0;animation:taMetalMaterialIn 260ms cubic-bezier(.22,1,.36,1) 340ms 1 forwards}
+.ta-brand-animated .ta-brand-material{opacity:0;animation:taMetalMaterialIn 240ms cubic-bezier(.22,1,.36,1) 360ms 1 forwards}
+.ta-brand-animated .ta-brand-edge{opacity:0;animation:taMetalEdgeSettle 180ms ease-out 1090ms 1 forwards}
 .ta-brand-animated .ta-brand-glint-soft{animation:taMetalGlintIntro 620ms cubic-bezier(.22,1,.36,1) 500ms 1 both,taMetalGlintIdle 8.4s linear 1.9s infinite}
 .ta-brand-animated .ta-brand-glint-core{animation:taMetalGlintCoreIntro 620ms cubic-bezier(.22,1,.36,1) 520ms 1 both,taMetalGlintCoreIdle 8.4s linear 1.9s infinite}
 .ta-brand-animated .ta-brand-facet-glint-top{animation:taMetalFacetTraceTop 620ms cubic-bezier(.22,1,.36,1) 520ms 1 both,taMetalFacetTraceTopIdle 8.4s linear 1.9s infinite}
 .ta-brand-animated .ta-brand-facet-glint-fold{animation:taMetalFacetTraceFold 620ms cubic-bezier(.22,1,.36,1) 600ms 1 both,taMetalFacetTraceFoldIdle 8.4s linear 1.9s infinite}
 .ta-brand-animated .ta-brand-facet-glint-stem{animation:taMetalFacetTraceStem 620ms cubic-bezier(.22,1,.36,1) 660ms 1 both,taMetalFacetTraceStemIdle 8.4s linear 1.9s infinite}
 @keyframes taMetalWake{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:none}}
-@keyframes taMetalWakeSafe{from{opacity:.42;transform:translateY(2px)}to{opacity:1;transform:none}}
-@keyframes taMetalFacetInSafe{from{opacity:.36}to{opacity:1}}
-@keyframes taMetalMaterialInSafe{from{opacity:.18}to{opacity:1}}
-@keyframes taMetalEdgeSettleSafe{from{opacity:.20}to{opacity:1}}
 @keyframes taMetalFacetIn{from{opacity:0}to{opacity:1}}
 @keyframes taMetalMaterialIn{from{opacity:0}to{opacity:1}}
 @keyframes taMetalEdgeSettle{from{opacity:0}to{opacity:1}}
@@ -3164,7 +3160,7 @@ main,#view{background:transparent!important}
 #login .ref-login-logo{width:184px!important;height:184px!important;animation:none!important;transform:none!important;filter:none!important;will-change:auto!important}
 #login .ref-login-logo::after{display:none!important}
 #login .ref-login-logo svg{filter:none!important}
-#login .ref-login-logo svg.ta-brand-animated{opacity:1!important;animation:taMetalWakeSafe 250ms cubic-bezier(.22,1,.36,1) 0ms 1 both!important}
+#login .ref-login-logo svg.ta-brand-animated{opacity:0!important;animation:taMetalWake 250ms cubic-bezier(.22,1,.36,1) 0ms 1 forwards!important}
 #login .ref-sr{position:static!important;width:auto!important;height:auto!important;clip:auto!important;clip-path:none!important;overflow:visible!important;text-align:center!important;color:#7E887D!important;font-size:10px!important;letter-spacing:.12em!important;text-transform:uppercase!important;margin:-7px 0 12px!important}
 #login .ref-login-form{padding:14px!important;border-radius:13px!important;background:rgba(255,255,255,.018)!important;border:1px solid rgba(255,255,255,.045)!important;box-shadow:none!important}
 #login .login-select-wrap,#login .ref-pass-wrap{height:50px!important;min-height:50px!important;border-radius:10px!important;background:#0D110E!important;border:1px solid rgba(175,196,137,.13)!important;box-shadow:none!important}
@@ -3324,7 +3320,7 @@ main,#view{background:transparent!important}
 
   #login .ref-login-hero{display:grid!important;place-items:center!important;position:relative!important;height:220px!important;min-height:220px!important;margin:2px 0 0!important;overflow:visible!important}
   #login .ref-login-logo{display:grid!important;place-items:center!important;position:relative!important;width:164px!important;height:164px!important;z-index:4!important;opacity:1!important;filter:none!important;will-change:opacity!important;animation:none!important}
-  #login .ref-login-logo svg.ta-brand-animated{display:block!important;opacity:1!important;animation:taMetalWakeSafe 250ms cubic-bezier(.22,1,.36,1) 0ms 1 both!important;filter:brightness(1.28) saturate(1.10) drop-shadow(0 14px 20px rgba(0,0,0,.28)) drop-shadow(0 0 16px rgba(193,232,91,.16))!important}#login .ref-login-logo .ta-brand-top{filter:brightness(1.32) saturate(1.10)!important}#login .ref-login-logo .ta-brand-stem-fold{filter:brightness(1.26) saturate(1.12)!important}#login .ref-login-mini .ta-brand-svg{filter:brightness(1.18) saturate(1.08) drop-shadow(0 0 7px rgba(193,232,91,.22))!important}#login .ref-login-mini .ta-brand-edge{stroke-opacity:.50!important}
+  #login .ref-login-logo svg.ta-brand-animated{display:block!important;opacity:0!important;animation:taMetalWake 250ms cubic-bezier(.22,1,.36,1) 0ms 1 forwards!important;filter:brightness(1.28) saturate(1.10) drop-shadow(0 14px 20px rgba(0,0,0,.28)) drop-shadow(0 0 16px rgba(193,232,91,.16))!important}#login .ref-login-logo .ta-brand-top{filter:brightness(1.32) saturate(1.10)!important}#login .ref-login-logo .ta-brand-stem-fold{filter:brightness(1.26) saturate(1.12)!important}#login .ref-login-mini .ta-brand-svg{filter:brightness(1.18) saturate(1.08) drop-shadow(0 0 7px rgba(193,232,91,.22))!important}#login .ref-login-mini .ta-brand-edge{stroke-opacity:.50!important}
   #login .ref-login-logo::after{display:block!important;content:''!important;position:absolute!important;inset:8%!important;z-index:-1!important;border-radius:50%!important;background:radial-gradient(circle,rgba(190,220,90,.08),rgba(86,100,63,.04) 46%,transparent 74%)!important;filter:blur(9px)!important;opacity:.9!important}
   #login .ref-login-logo .ta-brand-edge{stroke-opacity:.12!important}
   #login .ref-login-logo .ta-brand-material{stroke-opacity:.36!important}
@@ -3381,7 +3377,7 @@ main,#view{background:transparent!important}
 
 
 <style id="ta2703-login-hero-restore">
-/* v27.0.4 — LOGIN BRAND ONLY. Restore the large MASTER T on all viewports.
+/* v27.0.3 — LOGIN BRAND ONLY. Restore the large MASTER T on all viewports.
    No auth, user-picker, body, scroll, tabs or routing changes. */
 #login:not(.hide) .ref-login-hero{
   display:grid!important;
@@ -3400,10 +3396,10 @@ main,#view{background:transparent!important}
 #login:not(.hide) .ref-login-logo>.ta-brand-svg.ta-brand-animated{
   display:block!important;
   visibility:visible!important;
-  opacity:1!important;
+  opacity:0!important;
   width:100%!important;
   height:100%!important;
-  animation:taMetalWakeSafe 250ms cubic-bezier(.22,1,.36,1) 0ms 1 both!important;
+  animation:taMetalWake 250ms cubic-bezier(.22,1,.36,1) 0ms 1 forwards!important;
 }
 #login:not(.hide) .ref-login-logo>.ta-brand-svg.ta-brand-animated .ta-brand-top{
   animation:taMetalFacetIn 230ms cubic-bezier(.22,1,.36,1) 250ms 1 forwards!important;
@@ -3463,22 +3459,6 @@ main,#view{background:transparent!important}
 }
 </style>
 
-
-<style id="ta2704-login-master-t-failsafe">
-/* v27.0.4 — fail-safe: the hero MASTER T is always visible even if motion is interrupted. */
-#login:not(.hide) .ref-login-hero{display:grid!important;place-items:center!important;position:relative!important}
-#login:not(.hide) .ref-login-logo{display:grid!important;visibility:visible!important;opacity:1!important;z-index:4!important}
-#login:not(.hide) .ref-login-logo>.ta-brand-svg{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:100%!important}
-#login:not(.hide) .ref-login-logo>.ta-brand-svg.ta-brand-animated{opacity:1!important;animation:taMetalWakeSafe 250ms cubic-bezier(.22,1,.36,1) 0ms 1 both!important}
-#login:not(.hide) .ref-login-logo>.ta-brand-svg.ta-brand-animated .ta-brand-top{opacity:1!important;animation:taMetalFacetInSafe 230ms cubic-bezier(.22,1,.36,1) 250ms 1 both!important}
-#login:not(.hide) .ref-login-logo>.ta-brand-svg.ta-brand-animated .ta-brand-left{opacity:1!important;animation:taMetalFacetInSafe 220ms cubic-bezier(.22,1,.36,1) 300ms 1 both!important}
-#login:not(.hide) .ref-login-logo>.ta-brand-svg.ta-brand-animated .ta-brand-stem{opacity:1!important;animation:taMetalFacetInSafe 220ms cubic-bezier(.22,1,.36,1) 350ms 1 both!important}
-#login:not(.hide) .ref-login-logo>.ta-brand-svg.ta-brand-animated .ta-brand-stem-fold{opacity:1!important;animation:taMetalFacetInSafe 220ms cubic-bezier(.22,1,.36,1) 410ms 1 both!important}
-@media(min-width:701px){#login:not(.hide) .ref-login-logo{width:184px!important;height:184px!important}}
-@media(max-width:700px){#login:not(.hide) .ref-login-logo{width:164px!important;height:164px!important}}
-@media(max-width:390px){#login:not(.hide) .ref-login-logo{width:150px!important;height:150px!important}}
-@media(prefers-reduced-motion:reduce){#login:not(.hide) .ref-login-logo>.ta-brand-svg,#login:not(.hide) .ref-login-logo>.ta-brand-svg *{animation:none!important;opacity:1!important;transform:none!important}}
-</style>
 </head>
 <body>
 
@@ -3488,47 +3468,47 @@ main,#view{background:transparent!important}
     <div class="ref-login-brand">
       <div class="ref-login-mini"><svg class="ta-brand-svg ta-brand-small" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
   <defs>
-    <linearGradient id="loginMini-top" x1="250" y1="100" x2="760" y2="300" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3A4437"/><stop offset=".52" stop-color="#293128"/><stop offset="1" stop-color="#181D18"/></linearGradient>
-    <linearGradient id="loginMini-left" x1="120" y1="250" x2="420" y2="125" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#111510"/><stop offset=".58" stop-color="#242A21"/><stop offset="1" stop-color="#35402D"/></linearGradient>
-    <linearGradient id="loginMini-stem" x1="400" y1="300" x2="570" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2A3227"/><stop offset=".55" stop-color="#1A211A"/><stop offset="1" stop-color="#101510"/></linearGradient>
-    <linearGradient id="loginMini-fold" x1="570" y1="350" x2="420" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#839A59"/><stop offset=".22" stop-color="#56683E"/><stop offset=".7" stop-color="#35402D"/><stop offset="1" stop-color="#242A21"/></linearGradient>
+    <linearGradient id="loginMini-top" x1="250" y1="100" x2="760" y2="300" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4A5A3E"/><stop offset=".52" stop-color="#2E3728"/><stop offset="1" stop-color="#1C221C"/></linearGradient>
+    <linearGradient id="loginMini-left" x1="120" y1="250" x2="420" y2="125" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#171C15"/><stop offset=".58" stop-color="#2C3426"/><stop offset="1" stop-color="#4A5A3E"/></linearGradient>
+    <linearGradient id="loginMini-stem" x1="400" y1="300" x2="570" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#39442F"/><stop offset=".55" stop-color="#20281E"/><stop offset="1" stop-color="#171C17"/></linearGradient>
+    <linearGradient id="loginMini-fold" x1="570" y1="350" x2="420" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#C6F064"/><stop offset=".22" stop-color="#8FA85C"/><stop offset=".7" stop-color="#4A5A3E"/><stop offset="1" stop-color="#2C3426"/></linearGradient>
   </defs>
   <g class="ta-brand-geometry">
     <path class="ta-brand-plane ta-brand-top" d="M100 270 L250 110 L900 110 L738 270 Z" fill="url(#loginMini-top)"/>
     <path class="ta-brand-plane ta-brand-left" d="M100 270 L250 110 L525 270 Z" fill="url(#loginMini-left)"/>
     <path class="ta-brand-plane ta-brand-stem" d="M395 296 L510 296 C548 296 578 326 578 360 L578 644 L395 818 Z" fill="url(#loginMini-stem)"/>
     <path class="ta-brand-plane ta-brand-stem-fold" d="M570 354 L578 360 L578 644 L395 818 L395 505 Z" fill="url(#loginMini-fold)"/>
-    <path class="ta-brand-material" d="M250 116 L892 116" fill="none" stroke="#839A59" stroke-opacity=".22" stroke-width="7" stroke-linecap="round"/>
-    <path class="ta-brand-material" d="M570 363 L403 510" fill="none" stroke="#839A59" stroke-opacity=".20" stroke-width="5" stroke-linecap="round"/>
+    <path class="ta-brand-material" d="M250 116 L892 116" fill="none" stroke="#839A59" stroke-opacity=".45" stroke-width="7" stroke-linecap="round"/>
+    <path class="ta-brand-material" d="M570 363 L403 510" fill="none" stroke="#839A59" stroke-opacity=".40" stroke-width="5" stroke-linecap="round"/>
     <path class="ta-brand-lightpass" d="M284 127 C450 121 620 124 814 127" fill="none" stroke="#71884C" stroke-opacity=".0" stroke-width="9" stroke-linecap="round" pathLength="100"/>
-    <path class="ta-brand-edge ta-brand-edge-a" d="M530 116 L892 116" fill="none" stroke="#C1E85B" stroke-opacity=".24" stroke-width="5" stroke-linecap="round"/>
-    <path class="ta-brand-edge ta-brand-edge-b" d="M738 264 L548 264" fill="none" stroke="#C1E85B" stroke-opacity=".15" stroke-width="4" stroke-linecap="round"/>
-    <path class="ta-brand-edge ta-brand-edge-c" d="M401 510 L401 782" fill="none" stroke="#C1E85B" stroke-opacity=".18" stroke-width="4" stroke-linecap="round"/>
+    <path class="ta-brand-edge ta-brand-edge-a" d="M530 116 L892 116" fill="none" stroke="#D6EF78" stroke-opacity=".24" stroke-width="5" stroke-linecap="round"/>
+    <path class="ta-brand-edge ta-brand-edge-b" d="M738 264 L548 264" fill="none" stroke="#D6EF78" stroke-opacity=".15" stroke-width="4" stroke-linecap="round"/>
+    <path class="ta-brand-edge ta-brand-edge-c" d="M401 510 L401 782" fill="none" stroke="#D6EF78" stroke-opacity=".18" stroke-width="4" stroke-linecap="round"/>
   </g>
 </svg></div>
       <div class="ref-login-word"><b>TRADE AGENT</b><span>MANAGER</span></div>
-      <i id="loginVersion">v27.0.4</i>
+      <i id="loginVersion">v27.0.3</i>
     </div>
     <div class="ref-login-hero">
       <div class="ref-orbit orbit-a"></div><div class="ref-orbit orbit-b"></div><div class="ref-orbit-dot d1"></div><div class="ref-orbit-dot d2"></div>
       <div class="ref-login-logo"><svg class="ta-brand-svg ta-brand-animated" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
   <defs>
-    <linearGradient id="loginHero-top" x1="250" y1="100" x2="760" y2="300" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3A4437"/><stop offset=".52" stop-color="#293128"/><stop offset="1" stop-color="#181D18"/></linearGradient>
-    <linearGradient id="loginHero-left" x1="120" y1="250" x2="420" y2="125" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#111510"/><stop offset=".58" stop-color="#242A21"/><stop offset="1" stop-color="#35402D"/></linearGradient>
-    <linearGradient id="loginHero-stem" x1="400" y1="300" x2="570" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2A3227"/><stop offset=".55" stop-color="#1A211A"/><stop offset="1" stop-color="#101510"/></linearGradient>
-    <linearGradient id="loginHero-fold" x1="570" y1="350" x2="420" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#839A59"/><stop offset=".22" stop-color="#56683E"/><stop offset=".7" stop-color="#35402D"/><stop offset="1" stop-color="#242A21"/></linearGradient>
+    <linearGradient id="loginHero-top" x1="250" y1="100" x2="760" y2="300" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4A5A3E"/><stop offset=".52" stop-color="#2E3728"/><stop offset="1" stop-color="#1C221C"/></linearGradient>
+    <linearGradient id="loginHero-left" x1="120" y1="250" x2="420" y2="125" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#171C15"/><stop offset=".58" stop-color="#2C3426"/><stop offset="1" stop-color="#4A5A3E"/></linearGradient>
+    <linearGradient id="loginHero-stem" x1="400" y1="300" x2="570" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#39442F"/><stop offset=".55" stop-color="#20281E"/><stop offset="1" stop-color="#171C17"/></linearGradient>
+    <linearGradient id="loginHero-fold" x1="570" y1="350" x2="420" y2="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#C6F064"/><stop offset=".22" stop-color="#8FA85C"/><stop offset=".7" stop-color="#4A5A3E"/><stop offset="1" stop-color="#2C3426"/></linearGradient>
   </defs>
   <g class="ta-brand-geometry">
     <path class="ta-brand-plane ta-brand-top" d="M100 270 L250 110 L900 110 L738 270 Z" fill="url(#loginHero-top)"/>
     <path class="ta-brand-plane ta-brand-left" d="M100 270 L250 110 L525 270 Z" fill="url(#loginHero-left)"/>
     <path class="ta-brand-plane ta-brand-stem" d="M395 296 L510 296 C548 296 578 326 578 360 L578 644 L395 818 Z" fill="url(#loginHero-stem)"/>
     <path class="ta-brand-plane ta-brand-stem-fold" d="M570 354 L578 360 L578 644 L395 818 L395 505 Z" fill="url(#loginHero-fold)"/>
-    <path class="ta-brand-material" d="M250 116 L892 116" fill="none" stroke="#839A59" stroke-opacity=".22" stroke-width="7" stroke-linecap="round"/>
-    <path class="ta-brand-material" d="M570 363 L403 510" fill="none" stroke="#839A59" stroke-opacity=".20" stroke-width="5" stroke-linecap="round"/>
+    <path class="ta-brand-material" d="M250 116 L892 116" fill="none" stroke="#839A59" stroke-opacity=".45" stroke-width="7" stroke-linecap="round"/>
+    <path class="ta-brand-material" d="M570 363 L403 510" fill="none" stroke="#839A59" stroke-opacity=".40" stroke-width="5" stroke-linecap="round"/>
     <path class="ta-brand-lightpass" d="M284 127 C450 121 620 124 814 127" fill="none" stroke="#71884C" stroke-opacity=".0" stroke-width="9" stroke-linecap="round" pathLength="100"/>
-    <path class="ta-brand-edge ta-brand-edge-a" d="M530 116 L892 116" fill="none" stroke="#C1E85B" stroke-opacity=".24" stroke-width="5" stroke-linecap="round"/>
-    <path class="ta-brand-edge ta-brand-edge-b" d="M738 264 L548 264" fill="none" stroke="#C1E85B" stroke-opacity=".15" stroke-width="4" stroke-linecap="round"/>
-    <path class="ta-brand-edge ta-brand-edge-c" d="M401 510 L401 782" fill="none" stroke="#C1E85B" stroke-opacity=".18" stroke-width="4" stroke-linecap="round"/>
+    <path class="ta-brand-edge ta-brand-edge-a" d="M530 116 L892 116" fill="none" stroke="#D6EF78" stroke-opacity=".24" stroke-width="5" stroke-linecap="round"/>
+    <path class="ta-brand-edge ta-brand-edge-b" d="M738 264 L548 264" fill="none" stroke="#D6EF78" stroke-opacity=".15" stroke-width="4" stroke-linecap="round"/>
+    <path class="ta-brand-edge ta-brand-edge-c" d="M401 510 L401 782" fill="none" stroke="#D6EF78" stroke-opacity=".18" stroke-width="4" stroke-linecap="round"/>
   </g>
 </svg></div>
     </div>
@@ -3551,7 +3531,7 @@ main,#view{background:transparent!important}
       <button class="lbtn loff hide" id="lOffline">Продолжить офлайн</button>
       <button id="lCfg" class="login-config">Настроить базу</button>
     </div>
-    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v27.0.4</span></div>
+    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v27.0.3</span></div>
   </div>
 </div>
 <script id="ta2538-login-x-gesture-lock">
@@ -3652,6 +3632,7 @@ const CATALOG = {"cats":["КРАСКА COLOREVO","Натуральные","На�
 const SNAPSHOT = {"date":"С 26.08.26 по 26.08.26","map":{"0180070":229,"10000":8,"10001":23,"10002":10,"10003":7,"10004":21,"10006":12,"11000":139,"11010":31,"11011":35,"11020":24,"12002":110,"13000":25,"13001":47,"13010":14,"13020":51,"13030":77,"13040":39,"13050":12,"14001":119,"14020":70,"15100":3,"15101":1,"15111":6,"15141":1,"15160":15,"15161":2,"15190":170,"15901":30,"1921":45,"1923":12,"52011":3,"52020":52,"52021":2,"52060":7,"52061":19,"52083":30,"52100":27,"52101":15,"52131":46,"52260":45,"52261":6,"52302":17,"52312":19,"58000":19,"58004":14,"58005":13,"58006":8,"58007":8,"58009":19,"58010":19,"58071":22,"58081":33,"58091":23,"58092":17,"58093":39,"581012":29,"581021":17,"581031":27,"58913":16,"58931":25,"58935":16,"59005":41,"62000":26,"62001":133,"62003":37,"62006":1,"70003":10,"70628":8,"70632":10,"70644":7,"70700":168,"70711":2,"70712":5,"70713":17,"70715":59,"70718":1,"70733":16,"70750":151,"70752":21,"70753":33,"70754":592,"70755":40,"70756":1,"70810":47,"70820":15,"70840":15,"72700":11,"72701":14,"72704":5,"72705":4,"72709":21,"76514":12,"78302":4,"78303":36,"78306":3,"800103":72,"82501":47,"82502":8,"82503":25,"82504":17,"82505":9,"82507":2,"82510":19,"82511":13,"82512":6,"82513":14,"82515":2,"82528":36,"82531":7,"82550":44,"82551":45,"82552":92,"82561":45,"82562":45,"82570":39,"82575":88,"82580":8,"82582":14,"82585":71,"83170":1,"83200":26,"83201":99,"83210":6,"83211":36,"83212s":61,"83231":21,"83241":58,"83261":24,"83262":9,"83301":23,"83302s":158,"83310":11,"83311":26,"83312s":150,"83321":5,"83341":924,"83400":12,"83401":14,"83410":2,"83411":70,"83461":43,"83462":7,"83472":37,"83500":20,"83501":52,"83502s":170,"83511":10,"83512s":170,"83572":3,"83601":44,"83681":71,"83682":26,"83711":36,"83750":148,"83761":29,"83781":71,"83782":11,"83800":6,"83801":16,"83803":9,"83804":74,"83820":9,"83821":11,"83823":28,"84001":102,"84004":93,"84005":159,"84008":431,"84009":33,"84010":26,"84045":116,"84051":83,"84063":8,"84064":28,"84065":3,"84067":28,"84071":99,"84081":44,"84083":2,"84086":51,"84091":62,"84092":12,"84093":4,"841000":2,"841003":2,"84101":6,"841011":10,"8410171":90,"84103":10,"84104":63,"841081":42,"84305":41,"84400":40,"844001":205,"84406":70,"84415":64,"84431":63,"84435":36,"84451":73,"84465":25,"84500":137,"845001":79,"84503":10,"84504":27,"84551":51,"84565":24,"84566":23,"84567":14,"84601":0,"84605":57,"84611":59,"84615":9,"84634":1,"84645":60,"84651":31,"84666":9,"84705":28,"84711":23,"84715":76,"84734":5,"84744":14,"84745":32,"84751":113,"84764":27,"84765":42,"84766":40,"84781":12,"84815":69,"84823":2,"84824":19,"84827":89,"84843":11,"84846":10,"84900":59,"849001":32,"8490010":159,"84901":40,"84902":35,"84903":34,"84904":35,"84905":11,"84906":15,"84911":80,"84917":56,"84998":59,"84999":45,"85010":127,"85030":80,"85040":78,"86465":27,"86803":12,"86903":16,"89001":4,"89004":21,"89005":1,"89008":119,"89010":14,"89011":16,"89055":19,"89063":30,"89064":9,"89067":17,"89071":5,"89072":14,"89073":23,"89074":17,"89081":1,"89084":9,"89093":17,"891000":50,"891001":10,"891011":1,"89300":13,"89371":28,"89400":6,"89451":14,"89505":30,"89551":8,"89566":24,"89605":22,"89623":8,"89634":14,"89635":12,"89666":19,"89705":11,"89713":18,"89731":9,"89734":12,"89744":22,"89751":30,"89766":26,"89800":24,"89823":19,"89831":23,"89913":18,"89950":16,"89952":52,"89960":25,"89961":30,"89962":40,"89963":27,"89964":30,"89966":18,"89994":32,"89995":5,"9138":6}};
 
 let VERSION='27.0.4';
+{ const _lv=document.getElementById('loginVersion'); if(_lv) _lv.textContent='v'+VERSION; }
 const SCHEMA=2;
 const APP_OWNER='Артур Кудинов';
 const APP_FAMILY='Trade Agent Manager · Trade Agent · Flow System';
@@ -8825,7 +8806,7 @@ try{
   };
 
 
-  /* v27.0.4 — desktop-only system shortcuts. They open existing single-source tools,
+  /* v27.0.3 — desktop-only system shortcuts. They open existing single-source tools,
      so no sync/update logic is duplicated. */
   const ta2603PaintTabsBase=paintTabs;
   paintTabs=function(){
@@ -8969,9 +8950,9 @@ try{
   };
 
   function cacheBustBrandAssets(){
-    const icon=document.querySelector('link[rel="icon"]');if(icon)icon.href='./favicon.svg?v=27.0.4';
-    const apple=document.querySelector('link[rel="apple-touch-icon"]');if(apple)apple.href='./apple-touch-icon.png?v=27.0.4';
-    const man=document.querySelector('link[rel="manifest"]');if(man)man.href='./manifest.webmanifest?v=27.0.4';
+    const icon=document.querySelector('link[rel="icon"]');if(icon)icon.href='./favicon.svg?v=27.0.3';
+    const apple=document.querySelector('link[rel="apple-touch-icon"]');if(apple)apple.href='./apple-touch-icon.png?v=27.0.3';
+    const man=document.querySelector('link[rel="manifest"]');if(man)man.href='./manifest.webmanifest?v=27.0.3';
   }
   document.addEventListener('DOMContentLoaded',()=>{mountBrand(document);cacheBustBrandAssets()},{once:true});
   mountBrand(document);cacheBustBrandAssets();
