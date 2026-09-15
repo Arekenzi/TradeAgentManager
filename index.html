@@ -12,9 +12,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Trade Agent Manager">
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=27.1.0">
-<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=27.1.0">
-<link rel="manifest" href="./manifest.webmanifest?v=27.1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=27.1.1">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=27.1.1">
+<link rel="manifest" href="./manifest.webmanifest?v=27.1.1">
 <meta name="author" content="Артур Кудинов">
 <meta name="copyright" content="© 2026 Артур Кудинов. All rights reserved.">
 <meta name="application-name" content="Trade Agent Manager">
@@ -3124,7 +3124,7 @@ main,#view{background:transparent!important}
 #login .ref-login-logo::after{display:none!important}
 #login .ref-login-logo svg{filter:none!important}
 
-#login 
+#login .ref-sr{position:static!important;width:auto!important;height:auto!important;clip:auto!important;clip-path:none!important;overflow:visible!important;text-align:center!important;color:#7E887D!important;font-size:10px!important;letter-spacing:.12em!important;text-transform:uppercase!important;margin:-7px 0 12px!important}
 #login .ref-login-form{padding:14px!important;border-radius:13px!important;background:rgba(255,255,255,.018)!important;border:1px solid rgba(255,255,255,.045)!important;box-shadow:none!important}
 #login .login-select-wrap,#login .ref-pass-wrap{height:50px!important;min-height:50px!important;border-radius:10px!important;background:#0D110E!important;border:1px solid rgba(175,196,137,.13)!important;box-shadow:none!important}
 #login .login-select-wrap:focus-within,#login .ref-pass-wrap:focus-within{border-color:rgba(193,232,91,.42)!important;box-shadow:var(--ta-glow-micro)!important}
@@ -3427,7 +3427,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 </script>
 
 <style id="ta2710-response-skeleton">
-/* v27.1.0 — lightweight perceived-performance placeholders. */
+/* v27.1.1 — lightweight perceived-performance placeholders. */
 .ta-load-skeleton{display:grid;gap:12px;padding:4px 0 18px;pointer-events:none}
 .ta-load-skeleton .sk-row,.ta-load-skeleton .sk-card,.ta-load-skeleton .sk-chip{position:relative;overflow:hidden;background:#111711;border:1px solid rgba(166,190,92,.09);border-radius:16px}
 .ta-load-skeleton .sk-row{height:58px}.ta-load-skeleton .sk-card{height:146px}.ta-load-skeleton .sk-chip{height:36px;width:34%}
@@ -3478,7 +3478,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
   </g>
 </svg></div>
       <div class="ref-login-word"><b>TRADE AGENT</b><span>MANAGER</span></div>
-      <i id="loginVersion">v27.1.0</i>
+      <i id="loginVersion">v27.1.1</i>
     </div>
     <div class="ref-login-hero">
       <div class="ref-orbit orbit-a"></div><div class="ref-orbit orbit-b"></div><div class="ref-orbit-runner runner-a"><span class="ref-orbit-dot d1"></span></div><div class="ref-orbit-runner runner-b"><span class="ref-orbit-dot d2"></span></div>
@@ -3515,7 +3515,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
   </g>
 </svg></div>
     </div>
-    <div id="lsub" class="ref-sr" aria-live="polite">Вход в рабочее пространство</div>
+    <div id="lsub" class="ref-sr" aria-live="polite"></div>
     <div class="lbox ref-login-form">
       <div class="login-field ref-user-field"><span>Пользователь</span>
         <div class="login-select-wrap" id="loginUserPicker">
@@ -3534,7 +3534,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
       <button class="lbtn loff hide" id="lOffline">Продолжить офлайн</button>
       <button id="lCfg" class="login-config">Настроить базу</button>
     </div>
-    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v27.1.0</span></div>
+    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v27.1.1</span></div>
   </div>
 </div>
 <script id="ta2538-login-x-gesture-lock">
@@ -6262,7 +6262,7 @@ function onUserPick(){
   const nm=$('#lUserName'); if(nm) nm.textContent=m.name;
   renderLoginUserPicker();
   /* Первый вход и необходимость нового кода решает сервер. */
-  $('#lsub').textContent='Вход в рабочее пространство';
+  $('#lsub').textContent='';
   $('#lPass').placeholder='Введите код';
   $('#lPass2').classList.add('hide');
   $('#lGo').textContent='Войти';
@@ -6873,7 +6873,7 @@ function ta27PickClient(){
 }
 
 
-function patchRow(card,a){
+patchRow=function(card,a){
   if(card&&card.closest&&card.closest('#refProducts')){const p=PROD[a];if(p){card.outerHTML=ta23ProductCard(p);paintFab();return}}
   if(card&&card.closest&&card.closest('#ta22Products')){const p=PROD[a];if(p){card.outerHTML=ta22ProductCard(p);paintFab();return}}
   const p=PROD[a];if(!p||!card)return;
@@ -7449,12 +7449,12 @@ function fbCacheObject(){
   /* Strip large base64 photos BEFORE JSON serialization; this keeps iPhone saves fast and below localStorage quota. */
   const c=fbClean(Object.assign({},DB||{},{photos:{},presence:{}}))||{};c.photosAt=Number(DB.photosAt)||0;return c;
 }
-function persist(){try{localStorage.setItem(KEY,JSON.stringify(fbCacheObject()))}catch(_){}};
-function autoBackup(){
+persist=function(){try{localStorage.setItem(KEY,JSON.stringify(fbCacheObject()))}catch(_){}};
+autoBackup=function(){
   if(Date.now()-(DB.bakAt||0)<36e5)return; DB.bakAt=Date.now();
   try{for(let i=NBAK-1;i>0;i--){const x=localStorage.getItem(BAK(i-1));if(x)localStorage.setItem(BAK(i),x)}localStorage.setItem(BAK(0),JSON.stringify({at:Date.now(),data:fbCacheObject()}))}catch(_){try{localStorage.removeItem(BAK(NBAK-1))}catch(__){}}
 };
-function save(){persist();autoBackup();flush()};
+save=function(){persist();autoBackup();flush()};
 
 async function fbPushAllPhotos(){
   const entries=Object.entries(DB.photos||{}); let batch=FBDB.batch(),n=0;
@@ -7465,7 +7465,7 @@ async function fbPushAllPhotos(){
   if(n%40)await batch.commit();
 }
 /* Await the actual photo write. Do not pull the whole photo collection immediately after an un-awaited enqueue. */
-async function ta24PhotoSaveMap(sku){
+ta24PhotoSaveMap=async function(sku){
   sku=String(sku||'');if(!sku)return false;DB.photos=DB.photos||{};DB.photosAt=Date.now();persist();ta23PaintProducts();
   try{await fbPushPhoto(sku);fbSetStatus(true);return true}catch(e){fbSetStatus(false,e.message);toast('Фото не отправлено в Firebase: '+String(e.message||e).slice(0,90));return false}
 };
@@ -7494,7 +7494,7 @@ function fbRenderIfChanged(key,value,apply){const sig=fbSig(value);if(FB_LAST[ke
 
 
 /* Firestore writes. Draft/local UI saves do NOT rewrite stock/settings anymore. */
-function enqueue(type,payload){
+enqueue=function(type,payload){
   if(!FB_READY||!FBAUTH||!FBAUTH.currentUser)return Promise.resolve(false);
   return Promise.resolve().then(async()=>{
     if(type==='order.save'||type.startsWith('payment.')||type.startsWith('return.'))await fbPushOrder(payload.id||(payload.order&&payload.order.id));
@@ -7509,7 +7509,7 @@ function enqueue(type,payload){
   }).catch(e=>{fbSetStatus(false,e.message);try{toast('Firebase: '+String(e.message||e).slice(0,90))}catch(_){}})
 };
 /* Critical anti-flicker rule: legacy save() calls flush(); on Firebase it must be a no-op. */
-async function flush(){
+flush=async function(){
   if(!FB_READY||!FBAUTH||!FBAUTH.currentUser)return false;
   const q=Array.isArray(DB.queue)?DB.queue.splice(0):[];
   try{
@@ -7522,15 +7522,15 @@ async function flush(){
     persist();return true;
   }catch(e){DB.queue=q.concat(DB.queue||[]);persist();throw e}
 };
-async function pull(){return await fbPullAll()};
-async function syncNow(loud){try{await fbPullAll();render();if(loud)toast('Данные актуальны · Firebase LIVE');return true}catch(e){fbSetStatus(false,e.message);if(loud)toast('Ошибка Firebase: '+e.message);return false}};
-async function recoverServer(){return {ok:true,url:'firebase://tradeagentmanager'}};
-async function connectLiveSocket(){LIVE_PUSH=true;return true};
+pull=async function(){return await fbPullAll()};
+syncNow=async function(loud){try{await fbPullAll();render();if(loud)toast('Данные актуальны · Firebase LIVE');return true}catch(e){fbSetStatus(false,e.message);if(loud)toast('Ошибка Firebase: '+e.message);return false}};
+recoverServer=async function(){return {ok:true,url:'firebase://tradeagentmanager'}};
+connectLiveSocket=async function(){LIVE_PUSH=true;return true};
 /* Disable legacy Worker reconciliation/tick. Firestore listeners are authoritative. */
-async function ta24ForceReconcile(){return true};
-function ta24Wake(){if(ME&&FBAUTH&&FBAUTH.currentUser)fbSetStatus(true)};
+ta24ForceReconcile=async function(){return true};
+ta24Wake=function(){if(ME&&FBAUTH&&FBAUTH.currentUser)fbSetStatus(true)};
 
-function syncState(){
+syncState=function(){
   if(NEWVER)return{k:'wait',txt:'обновить',full:'Доступна версия '+NEWVER+'. Обновление запускается только вручную.'};
   if(!FBAUTH||!FBAUTH.currentUser)return{k:'wait',txt:'вход',full:'Требуется вход в Firebase.'};
   if(DB.sync&&DB.sync.err)return{k:'err',txt:'связь',full:'Firebase: '+DB.sync.err};
@@ -7562,7 +7562,7 @@ async function fbCreateManagerAccount(appId,password){
   return await fbCreateAliasAccess(appId,password,{role:(DB.users?.[appId]?.role||base.role||'manager'),name:(DB.users?.[appId]?.name||base.name),seed:DB.users?.[appId]||{}});
 }
 /* Firebase users UI: no service email is shown to employees. Reset rotates to a fresh hidden Firebase alias. */
-function vUsers22(){
+vUsers22=function(){
   if(!isAdmin()){go('price');return}
   const rows=MANAGERS.map(m=>{
     const u=DB.users[m.id]||{}, linked=!!u.firebaseUid||!!(FB_LOGIN_DIR&&FB_LOGIN_DIR[m.id]);
@@ -7575,13 +7575,13 @@ function vUsers22(){
   }).join('');
   $('#view').innerHTML=`<div class="ta22-pagehead"><div><h2>Пользователи</h2><p>Роли Trade Agent · вход только по пользователю и коду</p></div></div><div class="ta22-usergrid">${rows}</div>`;
 };
-async function ta22ResetUser(id){
+ta22ResetUser=async function(id){
   const m=MANAGERS.find(x=>x.id===id);if(!m)return;
   const linked=!!(DB.users?.[id]?.firebaseUid)||!!(FB_LOGIN_DIR&&FB_LOGIN_DIR[id]);
   sheet(linked?'Выдать новый код':'Создать доступ',`<div class="note g"><b>${esc(DB.users?.[id]?.name||m.name)}</b><br>${linked?'Старый код после сохранения будет отключен.':'Пользователь будет входить по имени и коду. Email не требуется.'}</div><label class="f"><span>${linked?'Новый код доступа':'Код доступа'} (минимум 6 символов)</span><input class="inp" id="newFbPass" type="password" minlength="6" inputmode="numeric" autocomplete="new-password"></label><button class="btn pri" id="newFbCreate">${linked?'Сохранить новый код':'Создать доступ'}</button>`,el=>{el.querySelector('#newFbCreate').onclick=async()=>{const b=el.querySelector('#newFbCreate');b.disabled=true;try{await fbCreateManagerAccount(id,el.querySelector('#newFbPass').value);closeSheet();toast(linked?'Новый код установлен':'Доступ создан');render()}catch(e){toast('Не удалось: '+String(e.message||e).slice(0,100));b.disabled=false}}});
 };
 /* Firestore audit instead of /audit Worker endpoint. */
-function vAuditPage22(){
+vAuditPage22=function(){
   if(!isAdmin()){go('price');return}auditEvent23('открыл журнал','система','','');
   $('#view').innerHTML=`<div class="ta22-pagehead"><div><h2>Журнал действий</h2><p>Firestore audit · текущий и перенесенный журнал</p></div><div class="actions"><button id="auditReload22">↻ Обновить</button></div></div><div class="ta22-audit-toolbar"><input class="inp" id="auditQ22" placeholder="Поиск по заявке, клиенту, действию…"><select class="inp" id="auditUser22"><option value="">Все пользователи</option></select><select class="inp" id="auditAct22"><option value="">Все действия</option></select><span></span></div><div id="auditState22" class="empty"><b>Загружаю журнал…</b></div>`;
   const loadAudit=async()=>{try{const q=await FBDB.collection('audit').orderBy('at','desc').limit(700).get(),log=q.docs.map(d=>d.data());TA22.auditCache=log;const users=[...new Set(log.map(x=>x.name).filter(Boolean))].sort(),acts=[...new Set(log.map(x=>x.act).filter(Boolean))].sort();$('#auditUser22').innerHTML='<option value="">Все пользователи</option>'+users.map(x=>`<option>${esc(x)}</option>`).join('');$('#auditAct22').innerHTML='<option value="">Все действия</option>'+acts.map(x=>`<option>${esc(x)}</option>`).join('');const paint=()=>{const qq=norm($('#auditQ22').value),u=$('#auditUser22').value,a=$('#auditAct22').value,arr=log.filter(x=>(!u||x.name===u)&&(!a||x.act===a)&&(!qq||norm([x.act,x.entity,x.id,x.name,x.info].join(' ')).includes(qq)));$('#auditState22').className='ta22-audit-list';$('#auditState22').innerHTML=arr.map(x=>`<div class="ta22-audit-row"><span class="dot"></span><div><b>${esc(x.act||'')}</b><span>${esc(x.entity||'')}${x.id?' · '+esc(x.id):''}${x.info?' · '+esc(x.info):''}</span></div><em>${esc(x.name||x.appId||'')}</em><time>${new Date(x.at||Date.now()).toLocaleString('ru-RU',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}</time></div>`).join('')||'<div class="empty">Ничего не найдено</div>'};['auditQ22','auditUser22','auditAct22'].forEach(id=>$('#'+id).addEventListener(id==='auditQ22'?'input':'change',paint));paint()}catch(e){$('#auditState22').className='empty err';$('#auditState22').innerHTML='<b>Не удалось загрузить журнал</b><span>'+esc(String(e.message||e))+'</span>'}};$('#auditReload22').onclick=loadAudit;loadAudit();
@@ -7634,11 +7634,12 @@ async function doLogin(){
   const pass=(document.getElementById('lPass')?.value||'').trim();
   const btn=document.getElementById('lGo');
   const er=document.getElementById('lErr');
-  const err=m=>{FB_LOGIN_ATTEMPTING=false;FB_PENDING_BIND=null;if(er)er.textContent=m;if(btn){btn.disabled=false;btn.classList.remove('login-busy');btn.style.pointerEvents='auto';btn.innerHTML='Войти <span>→</span>'}};
+  const err=m=>{fbWatchStop();FB_LOGIN_ATTEMPTING=false;FB_PENDING_BIND=null;if(er)er.textContent=m;if(btn){btn.disabled=false;btn.classList.remove('login-busy');btn.style.pointerEvents='auto';btn.innerHTML='Войти <span>→</span>'}};
   if(!pass)return err('Введите код доступа');
   if(pass.length<6)return err('Код доступа — минимум 6 символов');
 
   FB_LOGIN_ATTEMPTING=true;
+  fbWatchStart();
   if(btn){btn.disabled=true;btn.classList.add('login-busy');btn.textContent='Вхожу…'}
   if(er)er.textContent='';
 
@@ -7667,11 +7668,20 @@ async function doLogin(){
     const user=cred&&cred.user;
     if(!user)throw new Error('Firebase не вернул пользователя');
     await fbFinishExplicitLogin(user,id,pass,email,bootstrap);
+    fbWatchStop();
   }catch(e){
     const code=e&&e.code;
     err((code&&['auth/invalid-credential','auth/wrong-password','auth/user-not-found'].includes(code))?'Неверный код доступа':String(e&&e.message||e).replace(/^Firebase:\s*/,'').slice(0,140));
+  } finally {
+    if(!document.body.classList.contains('authenticated')){
+      fbWatchStop();
+      if(FB_LOGIN_ATTEMPTING){
+        FB_LOGIN_ATTEMPTING=false;
+        if(btn){btn.disabled=false;btn.classList.remove('login-busy');btn.style.pointerEvents='auto';btn.innerHTML='Войти <span>→</span>'}
+      }
+    }
   }
-};
+}
 
 /* Code recovery: managers receive a fresh code from the administrator. Admin recovery uses the original Firebase email only when needed. */
 document.addEventListener('click',async e=>{
@@ -7904,7 +7914,7 @@ function fbListen(){
   try{FB_UNSUB.push(FBDB.collection('presence').onSnapshot(q=>{DB.presence=DB.presence||{};q.forEach(d=>{const x=d.data()||{};if(x.appId)DB.presence[x.appId]=x});persist();if(VIEW==='users')render()}))}catch(_){}
 }
 
-async function doLogout(){
+doLogout=async function(){
   clearInterval(FB_PRESENCE_TIMER);FB_PRESENCE_TIMER=null;
   try{fbStopListeners();if(FBAUTH)await FBAUTH.signOut()}catch(_){}DB.auth={token:'',exp:0,uid:''};ME=null;persist();location.reload();
 };
@@ -7921,14 +7931,14 @@ function ta25TouchRecent(a){a=String(a||'');if(!a||!PROD[a])return;const arr=ta2
 function ta25DraftCount(){try{return Object.values((draft()&&draft().items)||{}).filter(x=>Number(x)>0).length}catch(_){return 0}}
 function ta25OverdueOrders(){try{return myOrders().filter(o=>o.status!=='Отменён'&&o.status!=='Списан'&&MONEY.debt(o)>0&&MONEY.overdueDays(o,today())>0)}catch(_){return []}}
 
-function ta23Products(){
+ta23Products=function(){
   let a=ta22Products();
   if(TA23_NEW_ONLY)a=a.filter(ta23IsNew);
   if(TA25_RECENT_ONLY){const rank=new Map(ta25Recent().map((id,i)=>[String(id),i]));a=a.filter(p=>rank.has(String(p.a))).sort((x,y)=>(rank.get(String(x.a))??999)-(rank.get(String(y.a))??999))}
   return a;
 };
-function ta23PaintKpis(){const c=ta23StockCounts(),box=$('#refKpis');if(!box)return;const recent=ta25Recent().length;box.innerHTML=`<button class="ref-kpi ${!TA25_RECENT_ONLY&&TA22.stock==='all'&&!TA23_NEW_ONLY?'active':''}" data-stock22="all"><span><b>${c.total}</b><span>Все товары</span></span></button><button class="ref-kpi mint ${!TA25_RECENT_ONLY&&TA22.stock==='available'&&!TA23_NEW_ONLY?'active':''}" data-stock22="available"><span><b>${c.avail}</b><span>В наличии</span></span></button><button class="ref-kpi warn ${!TA25_RECENT_ONLY&&TA22.stock==='low'?'active':''}" data-stock22="low"><span><b>${c.low}</b><span>Мало</span></span></button><button class="ref-kpi ${!TA25_RECENT_ONLY&&TA22.stock==='fav'?'active':''}" data-stock22="fav"><span><b>${c.fav}</b><span>Избранное</span></span></button><button class="ref-kpi ${TA25_RECENT_ONLY?'active':''}" data-recent25="1"><span><b>${recent}</b><span>Недавние</span></span></button><button class="ref-kpi mint ${TA23_NEW_ONLY?'active':''}" data-new23="1"><span><b>${c.newCount}</b><span>Новинки</span></span></button><button class="ref-analytics" id="refAnalytics">Отчеты →</button>`;$('#refAnalytics').onclick=()=>go('reports');box.querySelector('[data-recent25]')?.addEventListener('click',()=>{TA25_RECENT_ONLY=!TA25_RECENT_ONLY;if(TA25_RECENT_ONLY){TA22.stock='all';TA23_NEW_ONLY=false;CAT=null}ta23PaintCatalog()});box.querySelector('[data-new23]')?.addEventListener('click',()=>{TA23_NEW_ONLY=!TA23_NEW_ONLY;TA25_RECENT_ONLY=false;if(TA23_NEW_ONLY){TA22.stock='all';CAT=null}ta23PaintCatalog()})};
-function ta22FilterSheet(){sheet('Фильтры каталога',`<div class="seg"><button data-smart25="available" class="${!TA25_RECENT_ONLY&&TA22.stock==='available'?'on':''}">В наличии</button><button data-smart25="low" class="${!TA25_RECENT_ONLY&&TA22.stock==='low'?'on':''}">Мало</button><button data-smart25="out" class="${!TA25_RECENT_ONLY&&TA22.stock==='out'?'on':''}">Нет</button></div><div class="seg" style="margin-top:8px"><button data-smart25="all" class="${!TA25_RECENT_ONLY&&TA22.stock==='all'&&!TA23_NEW_ONLY?'on':''}">Все</button><button data-smart25="fav" class="${!TA25_RECENT_ONLY&&TA22.stock==='fav'?'on':''}">Избранное</button></div><div class="seg" style="margin-top:8px"><button data-smart25="recent" class="${TA25_RECENT_ONLY?'on':''}">Недавние</button><button data-smart25="new" class="${TA23_NEW_ONLY?'on':''}">Новинки</button></div>`,el=>el.querySelectorAll('[data-smart25]').forEach(b=>b.onclick=()=>{const x=b.dataset.smart25;TA25_RECENT_ONLY=x==='recent';TA23_NEW_ONLY=x==='new';if(!TA25_RECENT_ONLY&&!TA23_NEW_ONLY){TA22.stock=x;localStorage.setItem('ta22.stock',TA22.stock)}else TA22.stock='all';CAT=null;TA22.limit=90;closeSheet();ta23PaintCatalog()}))};
+ta23PaintKpis=function(){const c=ta23StockCounts(),box=$('#refKpis');if(!box)return;const recent=ta25Recent().length;box.innerHTML=`<button class="ref-kpi ${!TA25_RECENT_ONLY&&TA22.stock==='all'&&!TA23_NEW_ONLY?'active':''}" data-stock22="all"><span><b>${c.total}</b><span>Все товары</span></span></button><button class="ref-kpi mint ${!TA25_RECENT_ONLY&&TA22.stock==='available'&&!TA23_NEW_ONLY?'active':''}" data-stock22="available"><span><b>${c.avail}</b><span>В наличии</span></span></button><button class="ref-kpi warn ${!TA25_RECENT_ONLY&&TA22.stock==='low'?'active':''}" data-stock22="low"><span><b>${c.low}</b><span>Мало</span></span></button><button class="ref-kpi ${!TA25_RECENT_ONLY&&TA22.stock==='fav'?'active':''}" data-stock22="fav"><span><b>${c.fav}</b><span>Избранное</span></span></button><button class="ref-kpi ${TA25_RECENT_ONLY?'active':''}" data-recent25="1"><span><b>${recent}</b><span>Недавние</span></span></button><button class="ref-kpi mint ${TA23_NEW_ONLY?'active':''}" data-new23="1"><span><b>${c.newCount}</b><span>Новинки</span></span></button><button class="ref-analytics" id="refAnalytics">Отчеты →</button>`;$('#refAnalytics').onclick=()=>go('reports');box.querySelector('[data-recent25]')?.addEventListener('click',()=>{TA25_RECENT_ONLY=!TA25_RECENT_ONLY;if(TA25_RECENT_ONLY){TA22.stock='all';TA23_NEW_ONLY=false;CAT=null}ta23PaintCatalog()});box.querySelector('[data-new23]')?.addEventListener('click',()=>{TA23_NEW_ONLY=!TA23_NEW_ONLY;TA25_RECENT_ONLY=false;if(TA23_NEW_ONLY){TA22.stock='all';CAT=null}ta23PaintCatalog()})};
+ta22FilterSheet=function(){sheet('Фильтры каталога',`<div class="seg"><button data-smart25="available" class="${!TA25_RECENT_ONLY&&TA22.stock==='available'?'on':''}">В наличии</button><button data-smart25="low" class="${!TA25_RECENT_ONLY&&TA22.stock==='low'?'on':''}">Мало</button><button data-smart25="out" class="${!TA25_RECENT_ONLY&&TA22.stock==='out'?'on':''}">Нет</button></div><div class="seg" style="margin-top:8px"><button data-smart25="all" class="${!TA25_RECENT_ONLY&&TA22.stock==='all'&&!TA23_NEW_ONLY?'on':''}">Все</button><button data-smart25="fav" class="${!TA25_RECENT_ONLY&&TA22.stock==='fav'?'on':''}">Избранное</button></div><div class="seg" style="margin-top:8px"><button data-smart25="recent" class="${TA25_RECENT_ONLY?'on':''}">Недавние</button><button data-smart25="new" class="${TA23_NEW_ONLY?'on':''}">Новинки</button></div>`,el=>el.querySelectorAll('[data-smart25]').forEach(b=>b.onclick=()=>{const x=b.dataset.smart25;TA25_RECENT_ONLY=x==='recent';TA23_NEW_ONLY=x==='new';if(!TA25_RECENT_ONLY&&!TA23_NEW_ONLY){TA22.stock=x;localStorage.setItem('ta22.stock',TA22.stock)}else TA22.stock='all';CAT=null;TA22.limit=90;closeSheet();ta23PaintCatalog()}))};
 function ta25DecorateCatalog(){const root=document.querySelector('.ref-catalog');if(!root||root.querySelector('.ta25-quick-strip'))return;const draftN=ta25DraftCount(),over=ta25OverdueOrders(),low=ta23StockCounts().low;const bar=document.createElement('div');bar.className='ta25-quick-strip';bar.innerHTML=`<button class="${draftN?'ok':''}" data-quick25="draft">Черновик <b>${draftN}</b></button><button class="${over.length?'hot':''}" data-quick25="over">Просрочено <b>${over.length}</b></button><button class="${low?'warn':''}" data-quick25="low">Мало товара <b>${low}</b></button><button data-quick25="recent">Недавние <b>${ta25Recent().length}</b></button>`;const kpis=root.querySelector('#refKpis');if(kpis)kpis.insertAdjacentElement('afterend',bar);else root.prepend(bar);bar.addEventListener('click',e=>{const b=e.target.closest('[data-quick25]');if(!b)return;const a=b.dataset.quick25;if(a==='draft')return go('cart');if(a==='over')return go('debts');if(a==='low'){TA25_RECENT_ONLY=false;TA23_NEW_ONLY=false;TA22.stock='low';CAT=null;ta23PaintCatalog();return}if(a==='recent'){TA25_RECENT_ONLY=true;TA23_NEW_ONLY=false;TA22.stock='all';CAT=null;ta23PaintCatalog()}})}
 function vPrice23(){recalcUsed();$('#view').innerHTML=`<section class="ref-catalog"><div class="ref-toolbar"><div class="ref-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg><input id="refQ" placeholder="Поиск по наименованию, бренду, артикулу…" value="${esc(SEARCH)}"><kbd>Ctrl + K</kbd></div><button class="ref-tool filter" id="refFilter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Фильтры</button>${isAdmin()?`<button class="ref-tool ref-stock-upload" id="refStockUpload" title="Загрузить файл остатков"><span class="ref-stock-upload-ico">↻</span><span>Остатки</span></button>`:''}<div class="ref-layout"><button data-layout22="grid" class="${TA22.layout==='grid'?'on':''}" title="Сетка">▦</button><button data-layout22="list" class="${TA22.layout==='list'?'on':''}" title="Список">☷</button></div><select class="ref-sort" id="refSort"><option value="popular">По популярности</option><option value="stock">По наличию</option><option value="name">По названию</option><option value="price">Цена ↑</option><option value="priceDesc">Цена ↓</option></select></div><div class="ref-kpi-row" id="refKpis"></div><div class="ref-cats" id="refCats"></div><div id="refProducts" class="ref-grid"></div><button id="refLoad" class="ref-load" hidden>Показать еще</button></section>`;const q=$('#refQ');q.oninput=e=>{SEARCH=e.target.value;TA22.limit=90;clearTimeout(vPrice23._t);vPrice23._t=setTimeout(ta23PaintProducts,70)};$('#refFilter').onclick=ta22FilterSheet;$('#refStockUpload')?.addEventListener('click',pickStock);$('#refSort').value=TA22.sort;$('#refSort').onchange=e=>{TA22.sort=e.target.value;localStorage.setItem('ta23.sort',TA22.sort);ta23PaintProducts()};$('#refLoad').onclick=()=>{TA22.limit+=90;ta23PaintProducts()};ta23PaintCatalog()
   ta25DecorateCatalog();
@@ -8084,7 +8094,7 @@ function ta252GlobalSearch(){
 }
 
 
-function paintTop(){const titles={home:'Главная',price:'Каталог',cart:'Новый заказ',orders:'Заявки',debts:'Долги',ret:'Возвраты',clients:'Клиенты',reports:'Отчеты',stats:'Отчеты',users:'Пользователи',audit:'Журнал действий',admin:'Настройки'};$('#vTitle').textContent=titles[VIEW]||'Trade Agent';const sub=$('#topSub');if(sub){const st=syncState();sub.textContent=(isAdmin()?'ADMIN CONTROL':'FIELD SALES')+' · '+String(st.txt||'').toUpperCase()}$('#sDate').textContent=(DB.stock.date||'нет').replace(/^С\s+/i,'').replace(/\s*по\s+.*$/i,'');$('#sDot').className='dt'+(Date.now()-(DB.stock.at||0)>6048e5?' old':'');$('#meBtn').textContent=ME?(ME.id==='admin'?'АД':ta22Initials(ME.name)):'—';ensureChrome22();paintSync();document.documentElement.style.setProperty('--toph',$('#top').offsetHeight+'px')};
+paintTop=function(){const titles={home:'Главная',price:'Каталог',cart:'Новый заказ',orders:'Заявки',debts:'Долги',ret:'Возвраты',clients:'Клиенты',reports:'Отчеты',stats:'Отчеты',users:'Пользователи',audit:'Журнал действий',admin:'Настройки'};$('#vTitle').textContent=titles[VIEW]||'Trade Agent';const sub=$('#topSub');if(sub){const st=syncState();sub.textContent=(isAdmin()?'ADMIN CONTROL':'FIELD SALES')+' · '+String(st.txt||'').toUpperCase()}$('#sDate').textContent=(DB.stock.date||'нет').replace(/^С\s+/i,'').replace(/\s*по\s+.*$/i,'');$('#sDot').className='dt'+(Date.now()-(DB.stock.at||0)>6048e5?' old':'');$('#meBtn').textContent=ME?(ME.id==='admin'?'АД':ta22Initials(ME.name)):'—';ensureChrome22();paintSync();document.documentElement.style.setProperty('--toph',$('#top').offsetHeight+'px')};
 function ta252Nav(){const base=[['home','Главная','home'],['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['debts','Долги','debt'],['clients','Клиенты','clients'],['ret','Возвраты','back'],['reports','Отчеты','report']];if(isAdmin())base.push(['users','Пользователи','users'],['audit','Журнал действий','audit'],['admin','Настройки','settings']);return base}
 
 
@@ -8166,7 +8176,7 @@ function ta2535AndroidAppScroll(){
 }
 try{
   
-  function go(v){
+  go=function(v){
   if(!ME)return;
   if(v!=='debts')DCLIENT=null;
   if(VIEW!==v&&$('#view'))$('#view').innerHTML='';
@@ -8183,13 +8193,13 @@ try{
 }catch(_){}
 try{
   
-  function sheet(title,html,after){
+  sheet=function(title,html,after){
   $('#shTitle').textContent=title;$('#shBody').innerHTML=html;
   $('#sheet').classList.add('on');document.body.style.overflow='hidden';
   after&&after($('#shBody'));
   const a=ta2535AndroidAppScroll();if(a)a.style.setProperty('overflow-y','hidden','important');
 };
-  function closeSheet(){
+  closeSheet=function(){
   try{closeOrderActionSheet()}catch(e){}
   $('#sheet').classList.remove('on');document.body.style.overflow='';
   const a=ta2535AndroidAppScroll();if(a)a.style.removeProperty('overflow-y');
@@ -8943,12 +8953,12 @@ try{
     });
   }
   
-  function render(){if(!ME)return;if(VIEW==='suppliers')VIEW='home';keepFocus(()=>{paintTop();paintTabs();const map={home:vHome252,price:vPriceSafe23,cart:vCart,orders:vOrders,debts:vDebts,ret:vReturns,clients:vClients22,reports:vReports22,stats:vReports22,users:vUsers22,audit:vAuditPage22,admin:vAdmin};(map[VIEW]||vHome252)();paintFab()})
+  render=function(){if(!ME)return;if(VIEW==='suppliers')VIEW='home';keepFocus(()=>{paintTop();paintTabs();const map={home:vHome252,price:vPriceSafe23,cart:vCart,orders:vOrders,debts:vDebts,ret:vReturns,clients:vClients22,reports:vReports22,stats:vReports22,users:vUsers22,audit:vAuditPage22,admin:vAdmin};(map[VIEW]||vHome252)();paintFab()})
   const v=document.getElementById('view');if(v){v.classList.remove('ta26-view-enter');requestAnimationFrame(()=>{v.classList.add('ta26-view-enter');setTimeout(()=>v.classList.remove('ta26-view-enter'),820)})}
   mountBrand(document);
 };
   
-  function paintTabs(){
+  paintTabs=function(){
   if(!ME)return;
   const desktop=window.matchMedia&&window.matchMedia('(min-width:1024px)').matches;
   if(desktop){
@@ -8986,9 +8996,9 @@ try{
 };
 
   function cacheBustBrandAssets(){
-    const icon=document.querySelector('link[rel="icon"]');if(icon)icon.href='./favicon.svg?v=27.1.0';
-    const apple=document.querySelector('link[rel="apple-touch-icon"]');if(apple)apple.href='./apple-touch-icon.png?v=27.1.0';
-    const man=document.querySelector('link[rel="manifest"]');if(man)man.href='./manifest.webmanifest?v=27.1.0';
+    const icon=document.querySelector('link[rel="icon"]');if(icon)icon.href='./favicon.svg?v=27.1.1';
+    const apple=document.querySelector('link[rel="apple-touch-icon"]');if(apple)apple.href='./apple-touch-icon.png?v=27.1.1';
+    const man=document.querySelector('link[rel="manifest"]');if(man)man.href='./manifest.webmanifest?v=27.1.1';
   }
   document.addEventListener('DOMContentLoaded',()=>{mountBrand(document);cacheBustBrandAssets()},{once:true});
   mountBrand(document);cacheBustBrandAssets();
@@ -9362,7 +9372,7 @@ try{
 
 <style id="ta2716-unified-brand-system">
 /* =====================================================================
-   v27.1.0 — ONE MASTER T EVERYWHERE
+   v27.1.1 — ONE MASTER T EVERYWHERE
    Every Trade Agent brand mark uses the same locked geometry, facets,
    material and steel-glint as the Login Hero. Containers alone set size.
    Functional navigation/action icons are intentionally untouched.
@@ -9430,7 +9440,7 @@ try{
 
 <script id="ta2717-fast-qty-controls">
 /* =====================================================================
-   v27.1.0 — INSTANT CATALOG QUANTITY CONTROLS
+   v27.1.1 — INSTANT CATALOG QUANTITY CONTROLS
    Pointer-up is handled directly to avoid delayed compatibility click on iOS/PWA.
    Scrolling gestures are cancelled safely; keyboard click remains supported by legacy delegate.
    ===================================================================== */
