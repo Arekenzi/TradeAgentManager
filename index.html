@@ -8,13 +8,13 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="27.0.32">
+<meta name="app-version" content="27.0.34">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Trade Agent Manager">
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=27.0.32">
-<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=27.0.32">
-<link rel="manifest" href="./manifest.webmanifest?v=27.0.32">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=27.0.34">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=27.0.34">
+<link rel="manifest" href="./manifest.webmanifest?v=27.0.34">
 <meta name="author" content="Артур Кудинов">
 <meta name="copyright" content="© 2026 Артур Кудинов. All rights reserved.">
 <meta name="application-name" content="Trade Agent Manager">
@@ -3463,7 +3463,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
   </g>
 </svg></div>
       <div class="ref-login-word"><b>TRADE AGENT</b><span>MANAGER</span></div>
-      <i id="loginVersion">v27.0.32</i>
+      <i id="loginVersion">v27.0.34</i>
     </div>
     <div class="ref-login-hero">
       <div class="ref-orbit orbit-a"></div><div class="ref-orbit orbit-b"></div><div class="ref-orbit-runner runner-a"><span class="ref-orbit-dot d1"></span></div><div class="ref-orbit-runner runner-b"><span class="ref-orbit-dot d2"></span></div>
@@ -3519,7 +3519,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
       <button class="lbtn loff hide" id="lOffline">Продолжить офлайн</button>
       <button id="lCfg" class="login-config">Настроить базу</button>
     </div>
-    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v27.0.32</span></div>
+    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v27.0.34</span></div>
   </div>
 </div>
 <script id="ta2538-login-x-gesture-lock">
@@ -6449,6 +6449,84 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;op
 
 
 
+
+<style id="ta27034-final-layout-repair">
+/* =====================================================================
+   Trade Agent Manager v27.0.34 — FINAL LAYOUT REPAIR
+   Authoritative final layer: safe areas, cart header, bottom navigation,
+   date fields and narrow-screen containment. Functional JS is untouched.
+   ===================================================================== */
+html,body{max-width:100%;overflow-x:hidden!important}
+#app,#view,main{min-width:0;max-width:100%}
+
+/* Calculated/read-only dates remain visually consistent with editable dates. */
+input.inp[readonly]{
+  opacity:1!important;
+  color:var(--ink2)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.012)),var(--card)!important;
+  border-color:rgba(255,255,255,.09)!important;
+  cursor:default!important;
+  -webkit-text-fill-color:var(--ink2)!important;
+}
+input.inp[type="date"]{min-width:0;width:100%;font-variant-numeric:tabular-nums}
+
+@media(max-width:699px){
+  /* The app chrome always starts below iOS/Android status-bar safe area. */
+  #top{
+    top:0!important;
+    height:auto!important;
+    min-height:calc(58px + env(safe-area-inset-top))!important;
+    padding-top:calc(8px + env(safe-area-inset-top))!important;
+    padding-bottom:8px!important;
+    padding-left:max(8px,env(safe-area-inset-left))!important;
+    padding-right:max(8px,env(safe-area-inset-right))!important;
+    overflow:hidden!important;
+  }
+  /* Cart draft status belongs to document flow; it must never enter status bar. */
+  .ref-order-bar{
+    position:relative!important;
+    top:auto!important;
+    left:auto!important;
+    right:auto!important;
+    z-index:34!important;
+    max-width:100%!important;
+  }
+  .ta25-draft-state{
+    position:relative!important;
+    inset:auto!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow:hidden!important;
+  }
+  .ta25-draft-state span{min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important}
+
+  /* Reserve the real floating-tab height plus breathing room on every mobile screen. */
+  main#view,main{
+    width:100%!important;
+    padding-bottom:calc(var(--tabh) + 86px + env(safe-area-inset-bottom))!important;
+  }
+  #tabs{
+    bottom:calc(8px + env(safe-area-inset-bottom))!important;
+    max-width:calc(100vw - 20px)!important;
+    overflow:hidden!important;
+  }
+  .empty:last-child,.card:last-child,.ref-order-act:last-child{margin-bottom:12px!important}
+  .row2>*{min-width:0!important}
+}
+
+@media(max-width:430px){
+  #top .trow{width:100%!important;min-width:0!important}
+  #top .who{min-width:0!important;max-width:100%!important}
+  #top #stockPill,#top #syncPill{min-width:0!important;overflow:hidden!important}
+  #top #stockPill span:last-child,#top #syncPill span:last-child{overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+  .row2{grid-template-columns:1fr!important}
+}
+
+@media(max-height:620px) and (orientation:portrait) and (max-width:699px){
+  main#view,main{padding-bottom:calc(var(--tabh) + 76px + env(safe-area-inset-bottom))!important}
+}
+</style>
+
 </body></html>`;
 }
 /* Номер оператора в международном формате: 8XXXXXXXXXX и +7XXXXXXXXXX → 7XXXXXXXXXX */
@@ -6864,7 +6942,7 @@ async function checkAppUpdate(manual=false){
   if(manual) toast('Доступна версия '+remote+'. Нажмите статус «обновить».');
   return true;
 }
-/* v27.0.32 — installed PWA self-update watcher.
+/* v27.0.34 — installed PWA self-update watcher.
    The Home Screen icon stays installed. We only detect a published version here;
    the actual reload remains a deliberate user action via the top "обновить" pill. */
 async function autoCheckAppUpdate(reason=''){
@@ -9380,9 +9458,9 @@ try{
   };
 
   function cacheBustBrandAssets(){
-    const icon=document.querySelector('link[rel="icon"]');if(icon)icon.href='./favicon.svg?v=27.0.32';
-    const apple=document.querySelector('link[rel="apple-touch-icon"]');if(apple)apple.href='./apple-touch-icon.png?v=27.0.32';
-    const man=document.querySelector('link[rel="manifest"]');if(man)man.href='./manifest.webmanifest?v=27.0.32';
+    const icon=document.querySelector('link[rel="icon"]');if(icon)icon.href='./favicon.svg?v=27.0.34';
+    const apple=document.querySelector('link[rel="apple-touch-icon"]');if(apple)apple.href='./apple-touch-icon.png?v=27.0.34';
+    const man=document.querySelector('link[rel="manifest"]');if(man)man.href='./manifest.webmanifest?v=27.0.34';
   }
   document.addEventListener('DOMContentLoaded',()=>{mountBrand(document);cacheBustBrandAssets()},{once:true});
   mountBrand(document);cacheBustBrandAssets();
@@ -9925,7 +10003,7 @@ try{
 
 <script id="ta27030-profile-update-ui">
 /* =====================================================================
-   Trade Agent Manager v27.0.32 — visible in-profile updater
+   Trade Agent Manager v27.0.34 — visible in-profile updater
    Final UI layer vProfile26 hid the legacy update button. Restore update
    controls in the final profile without changing auth/business logic.
    ===================================================================== */
@@ -9979,7 +10057,7 @@ try{
 
 <style id="ta27031-responsive-hardening">
 /* =====================================================================
-   Trade Agent Manager v27.0.32 — RESPONSIVE HARDENING
+   Trade Agent Manager v27.0.34 — RESPONSIVE HARDENING
    UI geometry only. No auth, Firebase, order, payment, PDF or sync logic.
    The layer is intentionally last so legacy visual layers cannot re-break it.
    ===================================================================== */
@@ -10211,7 +10289,7 @@ img,video,canvas{max-width:100%}
 
 <style id="ta27032-mobile-layout-lock">
 /* =====================================================================
-   Trade Agent Manager v27.0.32 — MOBILE LAYOUT LOCK
+   Trade Agent Manager v27.0.34 — MOBILE LAYOUT LOCK
    Fixes the real iPhone catalog geometry without touching app/data logic.
    No horizontal "half visible" controls on phone layouts.
    ===================================================================== */
@@ -10468,7 +10546,7 @@ img,video,canvas{max-width:100%}
 
 <style id="ta27033-mobile-header-profile-fix">
 /* =====================================================================
-   Trade Agent Manager v27.0.33 — MOBILE HEADER PROFILE FIX
+   Trade Agent Manager v27.0.34 — MOBILE HEADER PROFILE FIX
    Scope: top chrome only. Keeps the profile/avatar fully inside viewport.
    No auth, Firebase, catalog, order, sync, bottom nav or scroll logic changed.
    ===================================================================== */
