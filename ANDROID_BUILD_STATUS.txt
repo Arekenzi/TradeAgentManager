@@ -1,0 +1,8 @@
+Trade Agent Manager Android shell prepared from stable v27.0.25 baseline.
+Android applicationId: kz.tradeagent.manager
+Android shell version: 1.0.0 (versionCode 1)
+Compatibility: Android 8.0+ / API 26+, target API 35
+Remote Web Manager: https://arekenzi.github.io/TradeAgentManager/
+Offline/failure fallback: bundled v27.0.25 snapshot
+CI: .github/workflows/android-apk.yml
+Local APK was not compiled in this environment because Android SDK/Gradle are not installed; GitHub Actions workflow performs the build.

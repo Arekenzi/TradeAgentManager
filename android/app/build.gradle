@@ -1,0 +1,34 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'kz.tradeagent.manager'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'kz.tradeagent.manager'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0.0'
+        buildConfigField 'String', 'REMOTE_URL', '"https://arekenzi.github.io/TradeAgentManager/"'
+    }
+    buildFeatures { buildConfig true }
+    signingConfigs {
+        release {
+            if (System.getenv('TA_KEYSTORE_FILE')) {
+                storeFile file(System.getenv('TA_KEYSTORE_FILE'))
+                storePassword System.getenv('TA_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('TA_KEY_ALIAS')
+                keyPassword System.getenv('TA_KEY_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        debug { applicationIdSuffix '.debug'; versionNameSuffix '-debug' }
+        release {
+            minifyEnabled false
+            if (System.getenv('TA_KEYSTORE_FILE')) signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}

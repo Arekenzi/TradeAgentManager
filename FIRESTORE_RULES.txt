@@ -20,8 +20,6 @@ service cloud.firestore {
     }
 
     match /state/{doc} {
-      // loginDirectory contains only synthetic Firebase aliases, never real employee emails.
-      // It must be readable before authentication so "user + code" works on a new device.
       allow read: if doc == 'loginDirectory' || active() || (signedIn() && doc == 'bootstrap');
       allow create: if admin() || (
         doc == 'bootstrap' && signedIn() && bootstrapMissing() &&

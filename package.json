@@ -1,0 +1,22 @@
+{
+  "name": "tradeagent-manager-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trade Agent Manager Android shell based on stable web baseline v27.0.25",
+  "scripts": {
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:debug": "npm run android:sync && cd android && ./gradlew assembleDebug",
+    "android:release": "npm run android:sync && cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "7.4.3",
+    "@capacitor/app": "7.0.2",
+    "@capacitor/core": "7.4.3",
+    "@capacitor/network": "7.0.2",
+    "@capacitor/splash-screen": "7.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "7.4.3"
+  }
+}
