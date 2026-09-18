@@ -8,13 +8,13 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="29.0.1">
+<meta name="app-version" content="29.0.2">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Trade Agent Manager">
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=29.0.1">
-<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=29.0.1">
-<link rel="manifest" href="./manifest.webmanifest?v=29.0.1">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=29.0.2">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg?v=29.0.2">
+<link rel="manifest" href="./manifest.webmanifest?v=29.0.2">
 <meta name="author" content="Артур Кудинов">
 <meta name="copyright" content="© 2026 Артур Кудинов. All rights reserved.">
 <meta name="application-name" content="Trade Agent Manager">
@@ -3439,6 +3439,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 </style>
 </head>
 <body>
+<!-- v29.0.2: stable 28.0.3 geometry restored; premium materials/icons refined without layout overrides. -->
 
 <!-- ================= ВХОД ================= -->
 <div id="login">
@@ -3477,7 +3478,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
   </g>
 </svg></div>
       <div class="ref-login-word"><b>TRADE AGENT</b><span>MANAGER</span></div>
-      <i id="loginVersion">v29.0.1</i>
+      <i id="loginVersion">v29.0.2</i>
     </div>
     <div class="ref-login-hero">
       <div class="ref-orbit orbit-a"></div><div class="ref-orbit orbit-b"></div><div class="ref-orbit-runner runner-a"><span class="ref-orbit-dot d1"></span></div><div class="ref-orbit-runner runner-b"><span class="ref-orbit-dot d2"></span></div>
@@ -3525,7 +3526,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
           <div id="lUserMenu" class="login-user-menu hide" role="listbox" aria-label="Пользователи"></div>
         </div>
       </div>
-      <label class="login-field ref-code-field" for="lPass"><span>Код доступа</span><div class="ref-pass-wrap"><span class="ref-pass-ico">⌁</span><input id="lPass" type="password" class="inp" placeholder="Введите код доступа" autocomplete="current-password"><button type="button" id="refEye" aria-label="Показать код">◉</button></div></label>
+      <label class="login-field ref-code-field" for="lPass"><span>Код доступа</span><div class="ref-pass-wrap"><span class="ref-pass-ico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="12" r="3.5"/><path d="M12 12h8m-3 0v3m-3-3v2"/></svg></span><input id="lPass" type="password" class="inp" placeholder="Введите код доступа" autocomplete="current-password"><button type="button" id="refEye" aria-label="Показать код"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.6"/></svg></button></div></label>
       <input id="lPass2" type="password" class="inp hide" placeholder="Повторите новый код" autocomplete="new-password">
       <div class="lerr" id="lErr"></div>
       <button type="button" class="lbtn" id="lGo">Войти <span>→</span></button>
@@ -3533,7 +3534,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
       <button class="lbtn loff hide" id="lOffline">Продолжить офлайн</button>
       <button id="lCfg" class="login-config">Настроить базу</button>
     </div>
-    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v29.0.1</span></div>
+    <div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v29.0.2</span></div>
   </div>
 </div>
 <script id="ta2538-login-x-gesture-lock">
@@ -3598,7 +3599,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
     <div class="trow">
       <div class="titleblock"><div class="ttl" id="vTitle">Каталог</div><div class="topsub" id="topSub">Sales workspace</div></div>
       <div class="who">
-        <button class="cmdpill" id="cmdBtn" aria-label="Быстрые команды" title="Быстрые команды · Ctrl+K"><span class="cmdicon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 8.5H6.8A2.8 2.8 0 1 1 9.6 5.7v12.6a2.8 2.8 0 1 1-2.8-2.8h10.4a2.8 2.8 0 1 1-2.8 2.8V5.7a2.8 2.8 0 1 1 2.8 2.8H8.5Z"/></svg></span><span class="cmdtext">Быстро</span><kbd>Ctrl K</kbd></button>
+        <button class="cmdpill" id="cmdBtn" aria-label="Быстрые команды" title="Быстрые команды · Ctrl+K"><span class="cmdicon">⌘</span><span class="cmdtext">Быстро</span><kbd>Ctrl K</kbd></button>
         <button class="stockpill" id="stockPill" aria-label="Дата остатков. Нажмите, чтобы обновить"><span class="dt" id="sDot"></span><span id="sDate">—</span></button>
         <button class="stockpill" id="syncPill" aria-label="Состояние связи с базой"><span class="dt" id="yDot"></span><span id="yTxt">—</span></button>
         <button class="avatar" id="meBtn" aria-label="Профиль, код и выход">—</button>
@@ -3634,7 +3635,7 @@ const CATALOG = {"cats":["КРАСКА COLOREVO","Натуральные","На�
 const SNAPSHOT = {"date":"С 26.08.26 по 26.08.26","map":{"0180070":229,"10000":8,"10001":23,"10002":10,"10003":7,"10004":21,"10006":12,"11000":139,"11010":31,"11011":35,"11020":24,"12002":110,"13000":25,"13001":47,"13010":14,"13020":51,"13030":77,"13040":39,"13050":12,"14001":119,"14020":70,"15100":3,"15101":1,"15111":6,"15141":1,"15160":15,"15161":2,"15190":170,"15901":30,"1921":45,"1923":12,"52011":3,"52020":52,"52021":2,"52060":7,"52061":19,"52083":30,"52100":27,"52101":15,"52131":46,"52260":45,"52261":6,"52302":17,"52312":19,"58000":19,"58004":14,"58005":13,"58006":8,"58007":8,"58009":19,"58010":19,"58071":22,"58081":33,"58091":23,"58092":17,"58093":39,"581012":29,"581021":17,"581031":27,"58913":16,"58931":25,"58935":16,"59005":41,"62000":26,"62001":133,"62003":37,"62006":1,"70003":10,"70628":8,"70632":10,"70644":7,"70700":168,"70711":2,"70712":5,"70713":17,"70715":59,"70718":1,"70733":16,"70750":151,"70752":21,"70753":33,"70754":592,"70755":40,"70756":1,"70810":47,"70820":15,"70840":15,"72700":11,"72701":14,"72704":5,"72705":4,"72709":21,"76514":12,"78302":4,"78303":36,"78306":3,"800103":72,"82501":47,"82502":8,"82503":25,"82504":17,"82505":9,"82507":2,"82510":19,"82511":13,"82512":6,"82513":14,"82515":2,"82528":36,"82531":7,"82550":44,"82551":45,"82552":92,"82561":45,"82562":45,"82570":39,"82575":88,"82580":8,"82582":14,"82585":71,"83170":1,"83200":26,"83201":99,"83210":6,"83211":36,"83212s":61,"83231":21,"83241":58,"83261":24,"83262":9,"83301":23,"83302s":158,"83310":11,"83311":26,"83312s":150,"83321":5,"83341":924,"83400":12,"83401":14,"83410":2,"83411":70,"83461":43,"83462":7,"83472":37,"83500":20,"83501":52,"83502s":170,"83511":10,"83512s":170,"83572":3,"83601":44,"83681":71,"83682":26,"83711":36,"83750":148,"83761":29,"83781":71,"83782":11,"83800":6,"83801":16,"83803":9,"83804":74,"83820":9,"83821":11,"83823":28,"84001":102,"84004":93,"84005":159,"84008":431,"84009":33,"84010":26,"84045":116,"84051":83,"84063":8,"84064":28,"84065":3,"84067":28,"84071":99,"84081":44,"84083":2,"84086":51,"84091":62,"84092":12,"84093":4,"841000":2,"841003":2,"84101":6,"841011":10,"8410171":90,"84103":10,"84104":63,"841081":42,"84305":41,"84400":40,"844001":205,"84406":70,"84415":64,"84431":63,"84435":36,"84451":73,"84465":25,"84500":137,"845001":79,"84503":10,"84504":27,"84551":51,"84565":24,"84566":23,"84567":14,"84601":0,"84605":57,"84611":59,"84615":9,"84634":1,"84645":60,"84651":31,"84666":9,"84705":28,"84711":23,"84715":76,"84734":5,"84744":14,"84745":32,"84751":113,"84764":27,"84765":42,"84766":40,"84781":12,"84815":69,"84823":2,"84824":19,"84827":89,"84843":11,"84846":10,"84900":59,"849001":32,"8490010":159,"84901":40,"84902":35,"84903":34,"84904":35,"84905":11,"84906":15,"84911":80,"84917":56,"84998":59,"84999":45,"85010":127,"85030":80,"85040":78,"86465":27,"86803":12,"86903":16,"89001":4,"89004":21,"89005":1,"89008":119,"89010":14,"89011":16,"89055":19,"89063":30,"89064":9,"89067":17,"89071":5,"89072":14,"89073":23,"89074":17,"89081":1,"89084":9,"89093":17,"891000":50,"891001":10,"891011":1,"89300":13,"89371":28,"89400":6,"89451":14,"89505":30,"89551":8,"89566":24,"89605":22,"89623":8,"89634":14,"89635":12,"89666":19,"89705":11,"89713":18,"89731":9,"89734":12,"89744":22,"89751":30,"89766":26,"89800":24,"89823":19,"89831":23,"89913":18,"89950":16,"89952":52,"89960":25,"89961":30,"89962":40,"89963":27,"89964":30,"89966":18,"89994":32,"89995":5,"9138":6}};
 
 const VERSION_META=document.querySelector('meta[name=\"app-version\"]');
-let VERSION=(VERSION_META&&VERSION_META.content?VERSION_META.content.trim():'')||'29.0.1';
+let VERSION=(VERSION_META&&VERSION_META.content?VERSION_META.content.trim():'')||'29.0.2';
 const SCHEMA=2;
 const APP_OWNER='Артур Кудинов';
 const APP_FAMILY='Trade Agent Manager · Trade Agent · Flow System';
@@ -6541,11 +6542,6 @@ input.inp[type="date"]{min-width:0;width:100%;font-variant-numeric:tabular-nums}
   main#view,main{padding-bottom:calc(var(--tabh) + 76px + env(safe-area-inset-bottom))!important}
 }
 </style>
-
-
-<!-- Premium refinement is integrated into the authoritative design system below. -->
-
-
 </body></html>`;
 }
 /* Номер оператора в международном формате: 8XXXXXXXXXX и +7XXXXXXXXXX → 7XXXXXXXXXX */
@@ -7627,7 +7623,7 @@ function ta22PaintProducts(){const all=ta22Products(),box=$('#ta22Products');if(
 function ta22PaintCatalog(){ta22PaintKpis();ta22PaintCats();ta22PaintProducts()}
 function ta22FilterSheet(){sheet('Фильтры каталога',`<div class="seg"><button data-stockpick="available" class="${TA22.stock==='available'?'on':''}">В наличии</button><button data-stockpick="low" class="${TA22.stock==='low'?'on':''}">Мало</button><button data-stockpick="out" class="${TA22.stock==='out'?'on':''}">Нет</button></div><div class="seg" style="margin-top:8px"><button data-stockpick="all" class="${TA22.stock==='all'?'on':''}">Все товары</button><button data-stockpick="fav" class="${TA22.stock==='fav'?'on':''}">Избранное</button></div>`,el=>el.querySelectorAll('[data-stockpick]').forEach(b=>b.onclick=()=>{TA22.stock=b.dataset.stockpick;localStorage.setItem('ta22.stock',TA22.stock);closeSheet();ta22PaintCatalog()}))}
 function vPrice22(){
-  recalcUsed();$('#view').innerHTML=`<div class="ta22-catalogbar"><div class="ta22-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg><input id="ta22Q" placeholder="Поиск по наименованию, категории, артикулу…" value="${esc(SEARCH)}"><button class="clear" id="ta22Clear" ${SEARCH?'':'hidden'}>×</button></div><div class="ta22-toolbar"><button class="ta22-tool filter" id="ta22Filter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M7 12h10M10 18h4"/></svg><span>Фильтры</span></button><button class="ta22-tool ${TA22.layout==='grid'?'on':''}" data-layout22="grid" title="Сетка">▦</button><button class="ta22-tool ${TA22.layout==='list'?'on':''}" data-layout22="list" title="Список">☷</button></div><select class="ta22-sort" id="ta22Sort"><option value="stock">По наличию</option><option value="name">По названию</option><option value="price">Цена ↑</option><option value="priceDesc">Цена ↓</option></select></div><div class="ta22-kpis" id="ta22Kpis"></div><div class="ta22-cats" id="ta22Cats"></div><div class="ta22-meta"><span><b id="ta22Found">—</b> · товарный ассортимент</span><span>${isAdmin()?'<button class="ta22-tool" id="quickUpl22">↻ Остатки</button>':''}</span></div><div id="ta22Products" class="ta22-grid"></div><button class="ta22-load" id="ta22Load" hidden>Показать еще</button>`;
+  recalcUsed();$('#view').innerHTML=`<div class="ta22-catalogbar"><div class="ta22-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg><input id="ta22Q" placeholder="Поиск по наименованию, категории, артикулу…" value="${esc(SEARCH)}"><button class="clear" id="ta22Clear" ${SEARCH?'':'hidden'}>×</button></div><div class="ta22-toolbar"><button class="ta22-tool filter" id="ta22Filter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M7 12h10M10 18h4"/></svg><span>Фильтры</span></button><button class="ta22-tool ${TA22.layout==='grid'?'on':''}" data-layout22="grid" title="Сетка"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></button><button class="ta22-tool ${TA22.layout==='list'?'on':''}" data-layout22="list" title="Список"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".8" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r=".8" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r=".8" fill="currentColor" stroke="none"/></svg></button></div><select class="ta22-sort" id="ta22Sort"><option value="stock">По наличию</option><option value="name">По названию</option><option value="price">Цена ↑</option><option value="priceDesc">Цена ↓</option></select></div><div class="ta22-kpis" id="ta22Kpis"></div><div class="ta22-cats" id="ta22Cats"></div><div class="ta22-meta"><span><b id="ta22Found">—</b> · товарный ассортимент</span><span>${isAdmin()?'<button class="ta22-tool" id="quickUpl22">↻ Остатки</button>':''}</span></div><div id="ta22Products" class="ta22-grid"></div><button class="ta22-load" id="ta22Load" hidden>Показать еще</button>`;
   const q=$('#ta22Q');q.oninput=e=>{SEARCH=e.target.value;$('#ta22Clear').hidden=!SEARCH;TA22.limit=90;clearTimeout(vPrice22._t);vPrice22._t=setTimeout(ta22PaintProducts,65)};$('#ta22Clear').onclick=()=>{SEARCH='';q.value='';$('#ta22Clear').hidden=true;ta22PaintProducts();q.focus()};$('#ta22Filter').onclick=ta22FilterSheet;$('#ta22Sort').value=TA22.sort;$('#ta22Sort').onchange=e=>{TA22.sort=e.target.value;localStorage.setItem('ta22.sort',TA22.sort);ta22PaintProducts()};$('#ta22Load').onclick=()=>{TA22.limit+=90;ta22PaintProducts()};$('#quickUpl22')?.addEventListener('click',pickStock);ta22PaintCatalog();
 }
 
@@ -7659,7 +7655,7 @@ const _vCart22Legacy=vCart;vCart=function(){_vCart22Legacy();ta22DecorateCart()}
 function ensureChrome22(){const who=document.querySelector('#top .who');if(who&&!$('#ta22Bell')){const b=document.createElement('button');b.id='ta22Bell';b.className='ta22-bell';b.setAttribute('aria-label','Центр внимания');b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg><i></i>';who.insertBefore(b,$('#meBtn'));b.onclick=vAttention}const badge=$('#ta22Bell i');if(badge){const n=attentionData().total;badge.textContent=n>99?'99+':n;badge.hidden=!n}}
 paintTop=function(){const titles={price:'Каталог',cart:'Новый заказ',orders:'Заявки',debts:'Долги',ret:'Возвраты',clients:'Клиенты',reports:'Отчеты',stats:'Отчеты',users:'Пользователи',audit:'Журнал действий',admin:'Настройки'};$('#vTitle').textContent=titles[VIEW]||'Trade Agent';const sub=$('#topSub');if(sub){const st=syncState();sub.textContent=(isAdmin()?'ADMIN CONTROL':'FIELD SALES')+' · '+String(st.txt||'').toUpperCase()}$('#sDate').textContent=(DB.stock.date||'нет').replace(/^С\s+/i,'').replace(/\s*по\s+.*$/i,'');$('#sDot').className='dt'+(Date.now()-(DB.stock.at||0)>6048e5?' old':'');$('#meBtn').textContent=ME?(ME.id==='admin'?'АД':ta22Initials(ME.name)):'—';ensureChrome22();paintSync();document.documentElement.style.setProperty('--toph',$('#top').offsetHeight+'px')};
 function ta22Nav(){const base=[['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['debts','Долги','debt'],['ret','Возвраты','back'],['clients','Клиенты','clients'],['reports','Отчеты','report']];if(isAdmin())base.push(['users','Пользователи','users'],['audit','Журнал действий','audit'],['admin','Настройки','settings']);return base}
-paintTabs=function(){if(!ME)return;const desktop=window.matchMedia&&window.matchMedia('(min-width:1024px)').matches;if(desktop){const n=ta22Nav();$('#tabs').innerHTML=`<div class="railbrand22"><span class="ta-brand-host">${TA23MARK}</span><div><b>TRADE AGENT</b><span>MANAGER</span></div></div>${n.map(([id,label,ic])=>`<button data-tab="${id}" class="${VIEW===id||(id==='reports'&&VIEW==='stats')?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')}<button id="refCollapse"><span class="rail-collapse-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></span><span>Свернуть</span></button>`;$('#refCollapse').onclick=()=>{const on=document.documentElement.classList.toggle('rail-collapsed');localStorage.setItem('ta23.rail',on?'1':'0')};return}const ids=[['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['debts','Долги','debt'],['more','Меню','more']];const sec=['ret','clients','reports','stats','users','audit','admin'].includes(VIEW);$('#tabs').innerHTML=ids.map(([id,label,ic])=>`<button data-tab="${id}" class="${id==='more'?sec:VIEW===id?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')};
+paintTabs=function(){if(!ME)return;const desktop=window.matchMedia&&window.matchMedia('(min-width:1024px)').matches;if(desktop){const n=ta22Nav();$('#tabs').innerHTML=`<div class="railbrand22"><span class="ta-brand-host">${TA23MARK}</span><div><b>TRADE AGENT</b><span>MANAGER</span></div></div>${n.map(([id,label,ic])=>`<button data-tab="${id}" class="${VIEW===id||(id==='reports'&&VIEW==='stats')?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')}<button id="refCollapse"><span><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6"/></svg></span><span>Свернуть</span></button>`;$('#refCollapse').onclick=()=>{const on=document.documentElement.classList.toggle('rail-collapsed');localStorage.setItem('ta23.rail',on?'1':'0')};return}const ids=[['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['debts','Долги','debt'],['more','Меню','more']];const sec=['ret','clients','reports','stats','users','audit','admin'].includes(VIEW);$('#tabs').innerHTML=ids.map(([id,label,ic])=>`<button data-tab="${id}" class="${id==='more'?sec:VIEW===id?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')};
 render=function(){if(!ME)return;if(VIEW==='suppliers')VIEW='price';keepFocus(()=>{paintTop();paintTabs();const map={price:vPrice22,cart:vCart,orders:vOrders,debts:vDebts,ret:vReturns,clients:vClients22,reports:vReports22,stats:vReports22,users:vUsers22,audit:vAuditPage22,admin:vAdmin};(map[VIEW]||vPrice22)();paintFab()})};
 
 vAbout=function(){const st=syncState();sheet('О системе',`<div class="about-hero"><div class="about-logo trade-mark">${TA22MARK}</div><div><span>TRADE AGENT ECOSYSTEM · MANAGER</span><h3>Trade Agent Manager</h3><p>REFERENCE EDITION · v${VERSION}</p></div></div><div class="about-grid"><div><u>Правообладатель</u><b>${esc(APP_OWNER)}</b></div><div><u>Сборка</u><b>${esc(APP_BUILD)}</b></div><div><u>Синхронизация</u><b>${esc(st.txt)}</b></div><div><u>Контур</u><b>Firebase · Firestore LIVE</b></div></div><div class="integration-card"><span>↔</span><div><b>Trade Agent Manager + Trade Agent Desktop</b><i>Единая облачная база Firestore. Менеджерские устройства получают заявки, остатки, пользователей, оплаты, возвраты и фотографии через realtime listeners.</i></div></div><div class="legal-card"><b>© 2026 ${esc(APP_OWNER)}. Все права защищены.</b><p>${esc(APP_FAMILY)} — частный программный продукт. Несанкционированное копирование, распространение, модификация и коммерческое использование без письменного разрешения правообладателя запрещены.</p></div>`)};
@@ -7742,7 +7738,7 @@ function ta23PaintProducts(){const all=ta23Products(),box=$('#refProducts');if(!
 function ta23PaintCats(){const box=$('#refCats');if(!box)return;const counts=new Map();CATALOG.prods.forEach(p=>counts.set(p.c,(counts.get(p.c)||0)+1));const ranked=[...counts].filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]);const arr=TA22.catMore?ranked:ranked.slice(0,9);box.innerHTML=`<button class="ref-cat ${CAT===null?'on':''}" data-cat22="all">Все <b>${CATALOG.prods.length}</b></button>${arr.map(([c,n])=>`<button class="ref-cat ${CAT===c?'on':''}" data-cat22="${c}">${esc((CATALOG.cats[c]||'Категория').replace(/\s*[-–—].*$/,'').slice(0,22))} <b>${n}</b></button>`).join('')}${ranked.length>9?`<button class="ref-cat" data-catmore22>${TA22.catMore?'Свернуть':'Еще'} <b>${Math.max(0,ranked.length-9)}</b></button>`:''}`}
 function ta23PaintKpis(){const c=ta23StockCounts(),box=$('#refKpis');if(!box)return;box.innerHTML=`<button class="ref-kpi" data-stock22="all"><span class="ki">⌘</span><span><b>${c.total}</b><span>Товаров в каталоге</span></span></button><button class="ref-kpi mint" data-stock22="available"><span class="ki">▣</span><span><b>${c.avail}</b><span>В наличии</span></span></button><button class="ref-kpi warn" data-stock22="low"><span class="ki">△</span><span><b>${c.low}</b><span>Низкий остаток</span></span></button><button class="ref-kpi bad" data-stock22="out"><span class="ki">⌘</span><span><b>${c.out}</b><span>Нет в наличии</span></span></button><button class="ref-kpi mint${TA23_NEW_ONLY?' active':''}" data-new23="1"><span class="ki">✳</span><span><b>${c.newCount}</b><span>Новинки</span></span></button><button class="ref-analytics" id="refAnalytics">Аналитика →</button>`;$('#refAnalytics').onclick=()=>go('reports');box.querySelector('[data-new23]')?.addEventListener('click',()=>{TA23_NEW_ONLY=!TA23_NEW_ONLY;if(TA23_NEW_ONLY){TA22.stock='all';CAT=null}ta23PaintCatalog()})}
 function ta23PaintCatalog(){ta23PaintKpis();ta23PaintCats();ta23PaintProducts()}
-function vPrice23(){recalcUsed();$('#view').innerHTML=`<section class="ref-catalog"><div class="ref-toolbar"><div class="ref-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg><input id="refQ" placeholder="Поиск по наименованию, бренду, артикулу…" value="${esc(SEARCH)}"><kbd>Ctrl + K</kbd></div><button class="ref-tool filter" id="refFilter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Фильтры</button>${isAdmin()?`<button class="ref-tool ref-stock-upload" id="refStockUpload" title="Загрузить файл остатков"><span class="ref-stock-upload-ico">↻</span><span>Остатки</span></button>`:''}<div class="ref-layout"><button data-layout22="grid" class="${TA22.layout==='grid'?'on':''}" title="Сетка">▦</button><button data-layout22="list" class="${TA22.layout==='list'?'on':''}" title="Список">☷</button></div><select class="ref-sort" id="refSort"><option value="popular">По популярности</option><option value="stock">По наличию</option><option value="name">По названию</option><option value="price">Цена ↑</option><option value="priceDesc">Цена ↓</option></select></div><div class="ref-kpi-row" id="refKpis"></div><div class="ref-cats" id="refCats"></div><div id="refProducts" class="ref-grid"></div><button id="refLoad" class="ref-load" hidden>Показать еще</button></section>`;const q=$('#refQ');q.oninput=e=>{SEARCH=e.target.value;TA22.limit=90;clearTimeout(vPrice23._t);vPrice23._t=setTimeout(ta23PaintProducts,70)};$('#refFilter').onclick=ta22FilterSheet;$('#refStockUpload')?.addEventListener('click',pickStock);$('#refSort').value=TA22.sort;$('#refSort').onchange=e=>{TA22.sort=e.target.value;localStorage.setItem('ta23.sort',TA22.sort);ta23PaintProducts()};$('#refLoad').onclick=()=>{TA22.limit+=90;ta23PaintProducts()};ta23PaintCatalog()}
+function vPrice23(){recalcUsed();$('#view').innerHTML=`<section class="ref-catalog"><div class="ref-toolbar"><div class="ref-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg><input id="refQ" placeholder="Поиск по наименованию, бренду, артикулу…" value="${esc(SEARCH)}"><kbd>Ctrl + K</kbd></div><button class="ref-tool filter" id="refFilter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Фильтры</button>${isAdmin()?`<button class="ref-tool ref-stock-upload" id="refStockUpload" title="Загрузить файл остатков"><span class="ref-stock-upload-ico"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6v5h-5"/><path d="M19 11a7.5 7.5 0 1 0 .2 3"/></svg></span><span>Остатки</span></button>`:''}<div class="ref-layout"><button data-layout22="grid" class="${TA22.layout==='grid'?'on':''}" title="Сетка"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></button><button data-layout22="list" class="${TA22.layout==='list'?'on':''}" title="Список"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".8" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r=".8" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r=".8" fill="currentColor" stroke="none"/></svg></button></div><select class="ref-sort" id="refSort"><option value="popular">По популярности</option><option value="stock">По наличию</option><option value="name">По названию</option><option value="price">Цена ↑</option><option value="priceDesc">Цена ↓</option></select></div><div class="ref-kpi-row" id="refKpis"></div><div class="ref-cats" id="refCats"></div><div id="refProducts" class="ref-grid"></div><button id="refLoad" class="ref-load" hidden>Показать еще</button></section>`;const q=$('#refQ');q.oninput=e=>{SEARCH=e.target.value;TA22.limit=90;clearTimeout(vPrice23._t);vPrice23._t=setTimeout(ta23PaintProducts,70)};$('#refFilter').onclick=ta22FilterSheet;$('#refStockUpload')?.addEventListener('click',pickStock);$('#refSort').value=TA22.sort;$('#refSort').onchange=e=>{TA22.sort=e.target.value;localStorage.setItem('ta23.sort',TA22.sort);ta23PaintProducts()};$('#refLoad').onclick=()=>{TA22.limit+=90;ta23PaintProducts()};ta23PaintCatalog()}
 function ta23MoreCart(){sheet('Еще',`<div class="action-sheet-grid"><button data-cartmore22="bonus"><span>◆</span><b>Бонусный товар</b><i>Выбрать бесплатную позицию со склада</i></button><button data-cartmore22="scan"><span>▣</span><b>Сканер штрихкода</b><i>Добавить товар камерой</i></button><button data-cartmore22="import"><span>⇩</span><b>Импорт из Excel</b><i>Артикул + количество</i></button><button data-cartmore22="discount"><span>%</span><b>Применить скидку</b><i>На текущий заказ</i></button><button class="danger" data-cartmore22="clear"><span>×</span><b>Очистить заказ</b><i>Удалить все позиции</i></button><button data-cartmore22="park"><span>◷</span><b>Сохранить черновик</b><i>Продолжить позднее</i></button></div>`)}
 function ta23OpenBonusPicker(){
   const v=$('#view');
@@ -8881,8 +8877,8 @@ const ta252EnsureChromeBase=ensureChrome22;
 ensureChrome22=function(){ta252EnsureChromeBase();const who=document.querySelector('#top .who');if(who&&!document.getElementById('ta252Search')){const b=document.createElement('button');b.id='ta252Search';b.setAttribute('aria-label','Поиск по системе');b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">${ICON.search}</svg>`;const bell=document.getElementById('ta22Bell');who.insertBefore(b,bell||who.firstChild);b.onclick=ta252GlobalSearch}}
 paintTop=function(){const titles={home:'Главная',price:'Каталог',cart:'Новый заказ',orders:'Заявки',debts:'Долги',ret:'Возвраты',clients:'Клиенты',reports:'Отчеты',stats:'Отчеты',users:'Пользователи',audit:'Журнал действий',admin:'Настройки'};$('#vTitle').textContent=titles[VIEW]||'Trade Agent';const sub=$('#topSub');if(sub){const st=syncState();sub.textContent=(isAdmin()?'ADMIN CONTROL':'FIELD SALES')+' · '+String(st.txt||'').toUpperCase()}$('#sDate').textContent=(DB.stock.date||'нет').replace(/^С\s+/i,'').replace(/\s*по\s+.*$/i,'');$('#sDot').className='dt'+(Date.now()-(DB.stock.at||0)>6048e5?' old':'');$('#meBtn').textContent=ME?(ME.id==='admin'?'АД':ta22Initials(ME.name)):'—';ensureChrome22();paintSync();document.documentElement.style.setProperty('--toph',$('#top').offsetHeight+'px')};
 function ta252Nav(){const base=[['home','Главная','home'],['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['debts','Долги','debt'],['clients','Клиенты','clients'],['ret','Возвраты','back'],['reports','Отчеты','report']];if(isAdmin())base.push(['users','Пользователи','users'],['audit','Журнал действий','audit'],['admin','Настройки','settings']);return base}
-paintTabs=function(){if(!ME)return;const desktop=window.matchMedia&&window.matchMedia('(min-width:1024px)').matches;if(desktop){const n=ta252Nav();$('#tabs').innerHTML=`<div class="railbrand22"><span class="ta-brand-host">${TA23MARK}</span><div><b>TRADE AGENT</b><span>MANAGER</span></div></div>${n.map(([id,label,ic])=>`<button data-tab="${id}" class="${VIEW===id||(id==='reports'&&VIEW==='stats')?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')}<button id="refCollapse"><span class="rail-collapse-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></span><span>Свернуть</span></button>`;$('#refCollapse').onclick=()=>{const on=document.documentElement.classList.toggle('rail-collapsed');localStorage.setItem('ta23.rail',on?'1':'0')};return}const ids=[['home','Главная','home'],['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['more','Меню','more']];const sec=['debts','ret','clients','reports','stats','users','audit','admin'].includes(VIEW);$('#tabs').innerHTML=ids.map(([id,label,ic])=>`<button data-tab="${id}" class="${id==='more'?sec:VIEW===id?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')};
-moreNav=function(){const items=[['debts','Долги','debt'],['clients','Клиенты','clients'],['ret','Возвраты','back'],['reports','Отчеты','report']];if(isAdmin())items.push(['users','Пользователи','users'],['audit','Журнал','audit'],['admin','Настройки','settings']);sheet('Разделы',`<div class="moregrid">${items.map(([id,label,ic])=>`<button class="moretile" data-more252="${id}"><span class="moreico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON[ic]}</svg>${navBadge(id)?`<i class="tbadge">${navBadge(id)}</i>`:''}</span><b>${label}</b></button>`).join('')}<button class="moretile" data-more252="search"><span class="moreico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON.search}</svg></span><b>Поиск</b></button><button class="moretile" data-more252="sync"><span class="moreico">↻</span><b>Синхронизация</b></button><button class="moretile" data-more252="profile"><span class="moreico">◎</span><b>Профиль</b></button><button class="moretile" data-more252="about"><span class="moreico">${TA25_TMARK}</span><b>О системе</b></button></div>`,el=>el.querySelectorAll('[data-more252]').forEach(b=>b.onclick=()=>{const id=b.dataset.more252;closeSheet();if(id==='sync')return setTimeout(vSync,120);if(id==='search')return setTimeout(ta252GlobalSearch,120);if(id==='profile')return setTimeout(()=>$('#meBtn').click(),120);if(id==='about')return setTimeout(vAbout,120);setTimeout(()=>go(id),80)}))};
+paintTabs=function(){if(!ME)return;const desktop=window.matchMedia&&window.matchMedia('(min-width:1024px)').matches;if(desktop){const n=ta252Nav();$('#tabs').innerHTML=`<div class="railbrand22"><span class="ta-brand-host">${TA23MARK}</span><div><b>TRADE AGENT</b><span>MANAGER</span></div></div>${n.map(([id,label,ic])=>`<button data-tab="${id}" class="${VIEW===id||(id==='reports'&&VIEW==='stats')?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')}<button id="refCollapse"><span><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6"/></svg></span><span>Свернуть</span></button>`;$('#refCollapse').onclick=()=>{const on=document.documentElement.classList.toggle('rail-collapsed');localStorage.setItem('ta23.rail',on?'1':'0')};return}const ids=[['home','Главная','home'],['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['more','Меню','more']];const sec=['debts','ret','clients','reports','stats','users','audit','admin'].includes(VIEW);$('#tabs').innerHTML=ids.map(([id,label,ic])=>`<button data-tab="${id}" class="${id==='more'?sec:VIEW===id?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')};
+moreNav=function(){const items=[['debts','Долги','debt'],['clients','Клиенты','clients'],['ret','Возвраты','back'],['reports','Отчеты','report']];if(isAdmin())items.push(['users','Пользователи','users'],['audit','Журнал','audit'],['admin','Настройки','settings']);sheet('Разделы',`<div class="moregrid">${items.map(([id,label,ic])=>`<button class="moretile" data-more252="${id}"><span class="moreico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON[ic]}</svg>${navBadge(id)?`<i class="tbadge">${navBadge(id)}</i>`:''}</span><b>${label}</b></button>`).join('')}<button class="moretile" data-more252="search"><span class="moreico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON.search}</svg></span><b>Поиск</b></button><button class="moretile" data-more252="sync"><span class="moreico"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6v5h-5"/><path d="M19 11a7.5 7.5 0 1 0 .2 3"/></svg></span><b>Синхронизация</b></button><button class="moretile" data-more252="profile"><span class="moreico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span><b>Профиль</b></button><button class="moretile" data-more252="about"><span class="moreico">${TA25_TMARK}</span><b>О системе</b></button></div>`,el=>el.querySelectorAll('[data-more252]').forEach(b=>b.onclick=()=>{const id=b.dataset.more252;closeSheet();if(id==='sync')return setTimeout(vSync,120);if(id==='search')return setTimeout(ta252GlobalSearch,120);if(id==='profile')return setTimeout(()=>$('#meBtn').click(),120);if(id==='about')return setTimeout(vAbout,120);setTimeout(()=>go(id),80)}))};
 render=function(){if(!ME)return;if(VIEW==='suppliers')VIEW='home';keepFocus(()=>{paintTop();paintTabs();const map={home:vHome252,price:vPriceSafe23,cart:vCart,orders:vOrders,debts:vDebts,ret:vReturns,clients:vClients22,reports:vReports22,stats:vReports22,users:vUsers22,audit:vAuditPage22,admin:vAdmin};(map[VIEW]||vHome252)();paintFab()})};
 
 /* =====================================================================
@@ -8997,24 +8993,24 @@ try{
    ===================================================================== */
 (function(){
   const I={
-    home:'<path d="M3.5 11.2 12 4.3l8.5 6.9"/><path d="M5.7 10.4V20h12.6v-9.6M9.4 20v-6.2h5.2V20"/>',
-    catalog:'<path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1.25"/><circle cx="4" cy="12" r="1.25"/><circle cx="4" cy="18" r="1.25"/>',
-    cart:'<path d="M3 4h2.4l2.1 10.1a2.1 2.1 0 0 0 2.1 1.7h7.8a2.1 2.1 0 0 0 2.1-1.7L21 8H6.2"/><circle cx="9.5" cy="20" r="1.25"/><circle cx="18" cy="20" r="1.25"/>',
-    orders:'<rect x="4.5" y="3" width="15" height="18" rx="2.6"/><path d="M8 8h8M8 12h8M8 16h5.2"/>',
-    debt:'<circle cx="12" cy="12" r="8.7"/><path d="M9 8.5h6M9 12h6M12 6.5v11"/>',
-    clients:'<circle cx="8.5" cy="8" r="3"/><path d="M3.2 19.5a5.3 5.3 0 0 1 10.6 0"/><circle cx="17.2" cy="9" r="2.35"/><path d="M15.4 14.5a4.7 4.7 0 0 1 5.4 4.8"/>',
-    returns:'<path d="m9 14-5-5 5-5"/><path d="M4.2 9h9.5a6.1 6.1 0 0 1 0 12H9"/>',
-    report:'<path d="M4 20V12M10 20V6M16 20v-10M22 20H2"/><path d="m4 9 5-3 5 2 6-5"/>',
-    users:'<circle cx="8" cy="8" r="3"/><circle cx="17" cy="8.5" r="2.5"/><path d="M2.8 20a5.2 5.2 0 0 1 10.4 0M13.8 15.2a4.9 4.9 0 0 1 7.4 4.8"/>',
-    audit:'<rect x="5" y="3.5" width="14" height="17" rx="2.2"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/><path d="M15.5 4.5v3h3"/>',
-    settings:'<circle cx="12" cy="12" r="3.1"/><path d="M12 2.8v2.4M12 18.8v2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M2.8 12h2.4M18.8 12h2.4M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/>',
-    search:'<circle cx="10.8" cy="10.8" r="6.4"/><path d="m15.7 15.7 4.3 4.3"/>',
-    scan:'<path d="M4 8V5.3A1.3 1.3 0 0 1 5.3 4H8M16 4h2.7A1.3 1.3 0 0 1 20 5.3V8M20 16v2.7a1.3 1.3 0 0 1-1.3 1.3H16M8 20H5.3A1.3 1.3 0 0 1 4 18.7V16"/><path d="M7.5 10h9M7.5 14h9"/>',
-    sync:'<path d="M20 7h-5.5V1.5"/><path d="M19.2 7A8.2 8.2 0 0 0 5.7 4.6L4 6.3M4 17h5.5v5.5"/><path d="M4.8 17A8.2 8.2 0 0 0 18.3 19.4L20 17.7"/>',
-    help:'<circle cx="12" cy="12" r="8.8"/><path d="M9.7 9.1a2.5 2.5 0 1 1 4 2c-1 .8-1.7 1.3-1.7 2.7"/><circle cx="12" cy="17.2" r=".7" fill="currentColor" stroke="none"/>',
-    about:'<circle cx="12" cy="12" r="8.8"/><path d="M12 10.5v5.5"/><circle cx="12" cy="7.4" r=".72" fill="currentColor" stroke="none"/>',
-    profile:'<circle cx="12" cy="8.2" r="3.8"/><path d="M4.2 20.5a7.8 7.8 0 0 1 15.6 0"/>',
-    attention:'<path d="M18 8.4a6 6 0 0 0-12 0c0 6.3-2.8 6.8-2.8 8.8h17.6c0-2-2.8-2.5-2.8-8.8"/><path d="M10 20.5h4"/>'
+    home:'<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5M9.5 20v-6h5v6"/>',
+    catalog:'<path d="M5 5h14M5 12h14M5 19h9"/><circle cx="3" cy="5" r=".8"/><circle cx="3" cy="12" r=".8"/><circle cx="3" cy="19" r=".8"/>',
+    cart:'<circle cx="9" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/><path d="M2.5 3.5h3l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6"/>',
+    orders:'<rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+    debt:'<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.3 9.3h5.4M9.3 14.7h5.4"/>',
+    clients:'<circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.3"/><path d="M15.5 14.5a4.5 4.5 0 0 1 5 4.5"/>',
+    returns:'<path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12H9"/>',
+    report:'<path d="M4 20V11M10 20V5M16 20v-7M22 20H2"/>',
+    users:'<circle cx="8" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0M12.5 20a5 5 0 0 1 9 0"/>',
+    audit:'<path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/><path d="m17 3 2 2"/>',
+    settings:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',
+    search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.3-3.3"/>',
+    scan:'<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M7 10h10M7 14h10"/>',
+    sync:'<path d="M20 7h-6V1M4 17h6v6"/><path d="M20 7a8 8 0 0 0-14-2M4 17a8 8 0 0 0 14 2"/>',
+    help:'<circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.4 2.4 0 1 1 3.8 2c-1 .7-1.6 1.2-1.6 2.5"/><circle cx="12" cy="17" r=".7" fill="currentColor" stroke="none"/>',
+    about:'<circle cx="12" cy="12" r="9"/><path d="M12 10v6"/><circle cx="12" cy="7" r=".7" fill="currentColor" stroke="none"/>',
+    profile:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+    attention:'<path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/>'
   };
   const svg=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${I[k]||I.about}</svg>`;
 
@@ -10738,29 +10734,29 @@ img,video,canvas{max-width:100%}
 </style>
 <style id="ta2800-premium-design-system">
 /* =====================================================================
-   TRADE AGENT MANAGER 29.0.1 — PREMIUM SIGNATURE SYSTEM
+   TRADE AGENT MANAGER 28.0.2 — PREMIUM SIGNATURE SYSTEM
    Authoritative visual + motion layer.
    Business logic, Firebase, auth, orders, payments and sync are untouched.
    ===================================================================== */
 :root{
-  --ta28-bg:#050705;
-  --ta28-bg-2:#080c09;
-  --ta28-surface:#0d120e;
-  --ta28-surface-2:#111812;
-  --ta28-surface-3:#151e16;
-  --ta28-graphite:#202720;
-  --ta28-olive:#53673e;
-  --ta28-olive-hi:#7f9859;
-  --ta28-neon:#c9ee63;
-  --ta28-neon-soft:#e4f7a5;
-  --ta28-text:#f2f5ef;
-  --ta28-text-2:#aab3a8;
-  --ta28-muted:#68736b;
-  --ta28-line:rgba(194,214,174,.105);
-  --ta28-line-hi:rgba(201,238,99,.26);
+  --ta28-bg:#030503;
+  --ta28-bg-2:#060a07;
+  --ta28-surface:#0b110d;
+  --ta28-surface-2:#101711;
+  --ta28-surface-3:#151d16;
+  --ta28-graphite:#252c26;
+  --ta28-olive:#607548;
+  --ta28-olive-hi:#91a968;
+  --ta28-neon:#d1ef71;
+  --ta28-neon-soft:#edf8b8;
+  --ta28-text:#f4f6f2;
+  --ta28-text-2:#b3bbb1;
+  --ta28-muted:#747e75;
+  --ta28-line:rgba(212,227,199,.105);
+  --ta28-line-hi:rgba(209,239,113,.28);
   --ta28-glass:rgba(10,14,11,.86);
-  --ta28-shadow:0 1px 0 rgba(255,255,255,.026),0 18px 48px -36px rgba(0,0,0,.98);
-  --ta28-shadow-raised:0 1px 0 rgba(255,255,255,.035),0 24px 64px -38px rgba(0,0,0,.98),0 0 0 1px rgba(201,238,99,.025);
+  --ta28-shadow:0 1px 0 rgba(255,255,255,.032),0 20px 52px -39px rgba(0,0,0,.98),0 0 0 1px rgba(255,255,255,.006);
+  --ta28-shadow-raised:0 1px 0 rgba(255,255,255,.042),0 28px 68px -40px rgba(0,0,0,.98),0 0 0 1px rgba(209,239,113,.032);
   --ta28-ease:cubic-bezier(.2,.78,.22,1);
   --ta28-ease-out:cubic-bezier(.16,1,.3,1);
   --ta28-fast:140ms;
@@ -10824,11 +10820,11 @@ main,#view{background:transparent!important}
 .ta-brand-svg{
   filter:brightness(1.08) saturate(1.04) drop-shadow(0 8px 15px rgba(0,0,0,.48)) drop-shadow(0 0 9px rgba(201,238,99,.09))!important;
 }
-.ta-brand-top{filter:brightness(1.22) saturate(.94)!important}
-.ta-brand-left{filter:brightness(.92) saturate(.92)!important}
-.ta-brand-stem{filter:brightness(1.03) saturate(.93)!important}
-.ta-brand-stem-fold{filter:brightness(1.22) saturate(1.12)!important}
-.ta-brand-edge{stroke-opacity:.34!important;filter:drop-shadow(0 0 3px rgba(201,238,99,.18))!important}
+.ta-brand-top{filter:brightness(1.30) contrast(1.04) saturate(.90)!important}
+.ta-brand-left{filter:brightness(.88) contrast(1.06) saturate(.88)!important}
+.ta-brand-stem{filter:brightness(1.05) contrast(1.04) saturate(.90)!important}
+.ta-brand-stem-fold{filter:brightness(1.30) contrast(1.03) saturate(1.10)!important}
+.ta-brand-edge{stroke-opacity:.38!important;filter:drop-shadow(0 0 4px rgba(209,239,113,.20))!important}
 .ta-brand-material{opacity:.82!important}
 .ta-brand-sheen{opacity:.13!important}
 #top .ta-mobile-app-brand{
@@ -10851,180 +10847,9 @@ main,#view{background:transparent!important}
 @keyframes ta28BrandSweepCore{0%,78%,100%{opacity:0;transform:translateX(-210px) rotate(27deg)}84%{opacity:.20}91%{opacity:.82;transform:translateX(760px) rotate(27deg)}95%{opacity:0}}
 @keyframes ta28BrandEdge{0%,78%,100%{stroke-opacity:.30;filter:drop-shadow(0 0 2px rgba(201,238,99,.12))}90%{stroke-opacity:.62;filter:drop-shadow(0 0 6px rgba(201,238,99,.32))}}
 
-/* ---------- LOGIN / AUTH EXPERIENCE — integrated, no patch layer ---------- */
-#login{
-  position:fixed!important;inset:0!important;z-index:200!important;
-  display:flex!important;align-items:center!important;justify-content:center!important;
-  padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))!important;
-  overflow:auto!important;overscroll-behavior:none!important;
-  background:
-    radial-gradient(900px 520px at 18% 8%,rgba(201,238,99,.075),transparent 62%),
-    radial-gradient(720px 520px at 92% 90%,rgba(71,95,58,.12),transparent 68%),
-    linear-gradient(135deg,#030604 0,#071009 48%,#030604 100%)!important;
-  color:var(--ta28-text)!important;
-}
-#login::before{
-  content:''!important;position:absolute!important;inset:0!important;pointer-events:none!important;opacity:.42!important;
-  background-image:
-    linear-gradient(rgba(220,240,204,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(220,240,204,.025) 1px,transparent 1px)!important;
-  background-size:48px 48px!important;
-  -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.75),transparent 82%)!important;
-  mask-image:linear-gradient(180deg,rgba(0,0,0,.75),transparent 82%)!important;
-}
-#login::after{
-  content:''!important;position:absolute!important;left:8%!important;right:8%!important;top:0!important;height:1px!important;pointer-events:none!important;
-  background:linear-gradient(90deg,transparent,rgba(216,247,132,.36),transparent)!important;
-  box-shadow:0 0 28px rgba(201,238,99,.14)!important;
-}
-#login .ref-login-shell{
-  position:relative!important;z-index:2!important;
-  width:min(980px,calc(100vw - 40px))!important;max-width:980px!important;min-width:0!important;
-  min-height:min(650px,calc(100dvh - 40px))!important;
-  padding:28px!important;margin:auto!important;
-  border:1px solid rgba(207,231,184,.115)!important;border-radius:24px!important;
-  background:
-    linear-gradient(135deg,rgba(255,255,255,.022),transparent 34%),
-    linear-gradient(145deg,rgba(13,21,15,.965),rgba(5,9,6,.985))!important;
-  box-shadow:inset 0 1px rgba(255,255,255,.034),inset 0 -1px rgba(0,0,0,.48),0 42px 120px -62px #000!important;
-  overflow:hidden!important;
-  display:grid!important;
-  grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr)!important;
-  grid-template-rows:auto minmax(0,1fr) auto!important;
-  grid-template-areas:'brand form' 'hero form' 'foot form'!important;
-  column-gap:34px!important;row-gap:18px!important;
-}
-#login .ref-login-shell::before{
-  content:''!important;position:absolute!important;inset:auto auto -180px -140px!important;width:460px!important;height:460px!important;border-radius:50%!important;
-  background:radial-gradient(circle,rgba(201,238,99,.075),rgba(90,113,65,.024) 42%,transparent 72%)!important;
-  filter:blur(2px)!important;opacity:.9!important;pointer-events:none!important;
-}
-#login .ref-login-shell::after{
-  content:''!important;position:absolute!important;top:0!important;bottom:0!important;left:calc(57% + 8px)!important;width:1px!important;
-  background:linear-gradient(180deg,transparent,rgba(207,231,184,.10) 16%,rgba(207,231,184,.06) 84%,transparent)!important;
-  opacity:1!important;pointer-events:none!important;
-}
-#login .ref-login-brand{
-  grid-area:brand!important;display:grid!important;grid-template-columns:42px minmax(0,1fr) auto!important;align-items:center!important;gap:12px!important;
-  min-width:0!important;margin:0!important;padding:2px 0 0!important;
-}
-#login .ref-login-mini{width:40px!important;height:40px!important;margin:0!important;display:grid!important;place-items:center!important}
-#login .ref-login-mini .ta-brand-svg{width:40px!important;height:40px!important;filter:brightness(1.16) saturate(1.02) drop-shadow(0 8px 13px rgba(0,0,0,.42)) drop-shadow(0 0 10px rgba(201,238,99,.10))!important}
-#login .ref-login-word{display:flex!important;flex-direction:column!important;gap:4px!important;min-width:0!important;line-height:1!important}
-#login .ref-login-word b{font-size:17px!important;font-weight:860!important;letter-spacing:.14em!important;color:#f3f6f1!important;white-space:nowrap!important}
-#login .ref-login-word span{font-size:9px!important;font-weight:760!important;letter-spacing:.28em!important;color:#7d897f!important}
-#login .ref-login-brand>i{align-self:center!important;margin:0!important;padding:6px 9px!important;border:1px solid rgba(201,238,99,.14)!important;border-radius:999px!important;background:rgba(201,238,99,.035)!important;color:#aebf7d!important;font:720 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace!important;letter-spacing:.07em!important;white-space:nowrap!important}
-
-#login .ref-login-hero{
-  grid-area:hero!important;position:relative!important;min-height:390px!important;height:auto!important;margin:0!important;display:grid!important;place-items:center!important;overflow:visible!important;
-}
-#login .ref-login-hero::before{
-  content:'SECURE · CONNECTED · LIVE'!important;position:absolute!important;left:0!important;bottom:12px!important;
-  color:#617065!important;font:760 9px/1 var(--sans)!important;letter-spacing:.22em!important;
-}
-#login .ref-login-logo{width:min(310px,72%)!important;height:min(310px,72%)!important;min-width:220px!important;min-height:220px!important;position:relative!important;z-index:2!important}
-#login .ref-login-logo::before{
-  content:''!important;position:absolute!important;inset:10%!important;border-radius:50%!important;z-index:-1!important;
-  background:radial-gradient(circle,rgba(201,238,99,.095),rgba(92,117,66,.035) 42%,transparent 72%)!important;filter:blur(18px)!important;
-}
-#login .ref-orbit{border-color:rgba(201,238,99,.10)!important;box-shadow:none!important}
-#login .ref-orbit-dot{box-shadow:0 0 14px rgba(201,238,99,.38)!important}
-
-#login .ref-login-form{
-  grid-area:form!important;align-self:center!important;min-width:0!important;width:100%!important;max-width:none!important;
-  padding:26px!important;margin:0!important;border:1px solid rgba(207,231,184,.105)!important;border-radius:18px!important;
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.018),transparent 36%),
-    linear-gradient(155deg,rgba(12,20,14,.98),rgba(6,10,7,.99))!important;
-  box-shadow:inset 0 1px rgba(255,255,255,.026),0 28px 72px -52px #000!important;
-}
-#login .ref-login-form::before{
-  content:'ВХОД В СИСТЕМУ'!important;display:block!important;margin:0 0 22px!important;color:#dfe7dc!important;
-  font:820 11px/1 var(--sans)!important;letter-spacing:.18em!important;
-}
-#login .login-field{display:block!important;margin:0 0 14px!important}
-#login .login-field>span{display:block!important;margin:0 0 7px!important;color:#78847b!important;font-size:9.5px!important;font-weight:790!important;letter-spacing:.15em!important;text-transform:uppercase!important}
-#login .login-select-wrap,#login .ref-pass-wrap{
-  position:relative!important;width:100%!important;min-width:0!important;height:54px!important;min-height:54px!important;
-  border:1px solid rgba(207,231,184,.115)!important;border-radius:12px!important;
-  background:linear-gradient(180deg,#0d150f,#08100b)!important;
-  box-shadow:inset 0 1px rgba(255,255,255,.018)!important;
-  transition:border-color 180ms var(--ta28-ease),box-shadow 180ms var(--ta28-ease),background 180ms var(--ta28-ease)!important;
-}
-#login .login-select-wrap:focus-within,#login .ref-pass-wrap:focus-within{
-  border-color:rgba(201,238,99,.42)!important;background:linear-gradient(180deg,#101a12,#09110c)!important;
-  box-shadow:0 0 0 3px rgba(201,238,99,.05),inset 0 1px rgba(255,255,255,.024)!important;
-}
-#login .login-user-badge{
-  width:34px!important;height:34px!important;left:10px!important;top:50%!important;transform:translateY(-50%)!important;border-radius:10px!important;
-  background:linear-gradient(145deg,#26351f,#182217)!important;border:1px solid rgba(201,238,99,.19)!important;color:#d8ee8a!important;
-  box-shadow:inset 0 1px rgba(255,255,255,.03)!important;font-weight:840!important;
-}
-#login .login-user-trigger{height:52px!important;padding-left:56px!important;padding-right:42px!important;color:#e8ece6!important;font-size:14px!important;font-weight:680!important}
-#login .login-chevron{right:14px!important;color:#738076!important}
-#login .ref-pass-wrap input#lPass{height:52px!important;width:100%!important;min-width:0!important;margin:0!important;padding:0 48px 0 42px!important;background:transparent!important;border:0!important;box-shadow:none!important;color:#eef2ec!important;font-size:15px!important}
-#login .ref-pass-ico{left:14px!important;color:#9eb36d!important;font-size:18px!important}
-#login #refEye{right:8px!important;width:38px!important;height:38px!important;border-radius:10px!important;color:#718076!important}
-#login #refEye:hover{background:rgba(201,238,99,.045)!important;color:#cde77a!important}
-#login .lerr{min-height:20px!important;margin:2px 0 2px!important;color:#ef9a8b!important;font-size:11.5px!important;line-height:1.4!important}
-#login .lbtn#lGo{
-  height:54px!important;min-height:54px!important;margin:8px 0 0!important;border-radius:12px!important;
-  background:linear-gradient(180deg,#d8f57d 0,#badf52 100%)!important;border:1px solid #def78c!important;color:#11170d!important;
-  box-shadow:inset 0 1px rgba(255,255,255,.42),0 18px 38px -24px rgba(201,238,99,.48)!important;
-  font-size:14px!important;font-weight:850!important;letter-spacing:.01em!important;
-}
-#login .ref-forgot,#login .login-config{
-  margin-top:12px!important;color:#78847b!important;font-size:10.5px!important;font-weight:650!important;letter-spacing:.02em!important;
-}
-#login .ref-forgot:hover,#login .login-config:hover{color:#bdd56f!important}
-#login .ref-login-foot{
-  grid-area:foot!important;display:flex!important;justify-content:space-between!important;align-items:center!important;gap:12px!important;
-  margin:0!important;padding:12px 0 0!important;border-top:1px solid rgba(207,231,184,.065)!important;color:#546057!important;font-size:8.5px!important;
-}
-#login #lsub{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important}
-
-@media(max-width:899px){
-  #login{align-items:flex-start!important;padding:max(12px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left))!important}
-  #login .ref-login-shell{
-    width:min(100%,430px)!important;max-width:430px!important;min-height:auto!important;padding:16px!important;border-radius:18px!important;
-    grid-template-columns:1fr!important;grid-template-rows:auto 185px auto auto!important;
-    grid-template-areas:'brand' 'hero' 'form' 'foot'!important;gap:12px!important;margin:auto!important;
-  }
-  #login .ref-login-shell::after{display:none!important}
-  #login .ref-login-brand{grid-template-columns:34px minmax(0,1fr) auto!important;gap:9px!important}
-  #login .ref-login-mini,#login .ref-login-mini .ta-brand-svg{width:32px!important;height:32px!important}
-  #login .ref-login-word b{font-size:14px!important;letter-spacing:.12em!important}
-  #login .ref-login-word span{font-size:8px!important;letter-spacing:.23em!important}
-  #login .ref-login-brand>i{font-size:8px!important;padding:5px 7px!important}
-  #login .ref-login-hero{min-height:185px!important;height:185px!important}
-  #login .ref-login-logo{width:176px!important;height:176px!important;min-width:176px!important;min-height:176px!important}
-  #login .ref-login-hero::before{display:none!important}
-  #login .ref-login-form{padding:16px!important;border-radius:15px!important}
-  #login .ref-login-form::before{margin-bottom:16px!important;font-size:10px!important}
-  #login .login-select-wrap,#login .ref-pass-wrap{height:52px!important;min-height:52px!important}
-  #login .login-user-trigger,#login .ref-pass-wrap input#lPass{height:50px!important}
-  #login .lbtn#lGo{height:52px!important;min-height:52px!important}
-  #login .ref-login-foot{justify-content:center!important;flex-direction:column!important;gap:2px!important;text-align:center!important;padding-top:10px!important}
-}
-@media(max-width:380px){
-  #login .ref-login-shell{width:100%!important;padding:13px!important;border-radius:16px!important;grid-template-rows:auto 162px auto auto!important}
-  #login .ref-login-hero{min-height:162px!important;height:162px!important}
-  #login .ref-login-logo{width:154px!important;height:154px!important;min-width:154px!important;min-height:154px!important}
-  #login .ref-login-form{padding:14px!important}
-}
-@media(max-height:700px) and (max-width:899px){
-  #login .ref-login-shell{grid-template-rows:auto 120px auto auto!important;gap:8px!important}
-  #login .ref-login-hero{height:120px!important;min-height:120px!important}
-  #login .ref-login-logo{width:118px!important;height:118px!important;min-width:118px!important;min-height:118px!important}
-  #login .ref-login-form{padding:12px!important}
-  #login .ref-login-form::before{margin-bottom:10px!important}
-  #login .login-field{margin-bottom:9px!important}
-  #login .ref-login-foot{display:none!important}
-}
-
 /* Login hero uses the same language, but one calm reveal rather than constant motion. */
 #login .ref-login-logo{filter:none!important;animation:ta28LoginMarkIn 880ms var(--ta28-ease-out) both!important}
-#login .ref-login-logo::after{opacity:.55!important;animation:ta28LoginHalo 5.6s ease-in-out 1.2s infinite!important}
+#login .ref-login-logo::after{opacity:.55!important;animation:ta28LoginHalo 8.8s ease-in-out 1.4s infinite!important}
 #login .ref-login-logo .ta-brand-svg{filter:brightness(1.12) saturate(1.05) drop-shadow(0 20px 36px rgba(0,0,0,.58)) drop-shadow(0 0 16px rgba(201,238,99,.11))!important}
 @keyframes ta28LoginMarkIn{from{opacity:0;transform:translate3d(0,7px,0) scale(.96)}to{opacity:1;transform:none}}
 @keyframes ta28LoginHalo{0%,100%{opacity:.34;transform:scale(.96)}50%{opacity:.62;transform:scale(1.04)}}
@@ -11166,14 +10991,6 @@ input.inp[readonly]{opacity:1!important;cursor:default!important;color:#dce2da!i
   color:#cbd2ca!important;
 }
 
-/* ---------- ICONOGRAPHY ---------- */
-#tabs svg,.ref-tool svg,.roundaction svg,.ref-stock-upload svg,.shead svg,.ta252-quick svg,.ref-kpi svg{
-  fill:none!important;stroke:currentColor!important;stroke-width:1.72!important;stroke-linecap:round!important;stroke-linejoin:round!important;vector-effect:non-scaling-stroke!important;
-}
-#tabs>button svg{width:20px!important;height:20px!important;filter:none!important}
-#tabs>button.on svg{filter:drop-shadow(0 0 7px rgba(201,238,99,.12))!important}
-.ref-tool svg,.roundaction svg,.ref-stock-upload svg{width:17px!important;height:17px!important}
-
 /* ---------- FLOATING BOTTOM NAV ---------- */
 #tabs{
   background:linear-gradient(180deg,rgba(7,10,8,.965),rgba(5,8,6,.985))!important;
@@ -11295,7 +11112,7 @@ button:active,.btn:active,.ref-cat:active,.ta25-quick-strip button:active,.round
 
 
 <script id="ta2800-update-integrity">
-/* v29.0.1 UPDATE INTEGRITY FIX
+/* v28.0.2 UPDATE INTEGRITY FIX
    Single source of truth: meta app-version -> runtime VERSION -> updater -> asset cache busting. */
 (function(){
   const m=document.querySelector('meta[name="app-version"]');
@@ -11306,27 +11123,27 @@ button:active,.btn:active,.ref-cat:active,.ta25-quick-strip button:active,.round
 
 <style id="ta2801-visual-rebuild">
 /* =====================================================================
-   TRADE AGENT MANAGER 29.0.1 — PREMIUM PRODUCT REFINEMENT
-   Existing visual system refined in place. No extra overlay stylesheet is added.
-   Business logic, sync, orders and responsive dock behavior remain untouched.
+   TRADE AGENT MANAGER 28.0.2 — VISIBLE PREMIUM REBUILD
+   This block intentionally sits LAST in the cascade.
+   It is a visual/motion layer only; business logic is untouched.
    ===================================================================== */
 :root{
-  --ta281-bg:#040705;
-  --ta281-bg2:#070b08;
-  --ta281-panel:#0b110d;
-  --ta281-panel2:#101711;
-  --ta281-panel3:#151d16;
-  --ta281-line:rgba(218,232,207,.11);
-  --ta281-line-hi:rgba(202,231,118,.25);
-  --ta281-olive:#82985d;
-  --ta281-neon:#c8ed68;
-  --ta281-neon2:#e4f7a2;
-  --ta281-text:#f3f6ef;
-  --ta281-muted:#7b867e;
-  --ta281-radius:18px;
-  --ta281-shadow:0 1px 0 rgba(255,255,255,.028),0 18px 46px -38px rgba(0,0,0,.96);
-  --ta281-shadow-hi:0 1px 0 rgba(255,255,255,.045),0 22px 52px -38px rgba(0,0,0,.96),0 0 24px -22px rgba(200,237,104,.30);
-  --ta281-ease:cubic-bezier(.22,.82,.24,1);
+  --ta281-bg:#020403;
+  --ta281-bg2:#050906;
+  --ta281-panel:#09100b;
+  --ta281-panel2:#0d1510;
+  --ta281-panel3:#111a13;
+  --ta281-line:rgba(221,236,207,.105);
+  --ta281-line-hi:rgba(216,241,126,.26);
+  --ta281-olive:#9fb969;
+  --ta281-neon:#d1ef71;
+  --ta281-neon2:#ebf8aa;
+  --ta281-text:#f5f7f3;
+  --ta281-muted:#879188;
+  --ta281-radius:20px;
+  --ta281-shadow:0 1px 0 rgba(255,255,255,.032),0 26px 72px -52px #000;
+  --ta281-shadow-hi:0 1px 0 rgba(255,255,255,.042),0 30px 76px -49px rgba(0,0,0,.95),0 0 38px -30px rgba(209,239,113,.36);
+  --ta281-ease:cubic-bezier(.2,.78,.2,1);
 }
 html,body{background:var(--ta281-bg)!important}
 body{
@@ -11466,48 +11283,24 @@ body{
 #tabs>button.on svg{filter:drop-shadow(0 0 7px rgba(201,238,99,.24))!important}
 
 /* MOTION — more premium: low amplitude, crisp settle, staggered reveal */
-#view.ta26-view-enter{animation:ta281ViewIn 320ms var(--ta281-ease) both!important}
-@keyframes ta281ViewIn{0%{opacity:0;transform:translate3d(0,6px,0);filter:blur(1.2px)}68%{opacity:1;filter:blur(0)}100%{transform:none;filter:none}}
-.ref-catalog>.ta281-catalog-hero{animation:ta281HeroIn 420ms var(--ta281-ease) both}
+#view.ta26-view-enter{animation:ta281ViewIn 460ms var(--ta281-ease) both!important}
+@keyframes ta281ViewIn{0%{opacity:0;transform:translate3d(0,10px,0);filter:blur(2px)}55%{opacity:1;filter:blur(0)}100%{transform:none;filter:none}}
+.ref-catalog>.ta281-catalog-hero{animation:ta281HeroIn 620ms var(--ta281-ease) both}
 @keyframes ta281HeroIn{from{opacity:0;transform:translate3d(0,12px,0) scale(.99)}to{opacity:1;transform:none}}
-.ref-kpi-row>*{animation:ta281TileIn 360ms var(--ta281-ease) both}
+.ref-kpi-row>*{animation:ta281TileIn 520ms var(--ta281-ease) both}
 .ref-kpi-row>*:nth-child(2){animation-delay:35ms}.ref-kpi-row>*:nth-child(3){animation-delay:70ms}.ref-kpi-row>*:nth-child(4){animation-delay:105ms}.ref-kpi-row>*:nth-child(5){animation-delay:140ms}.ref-kpi-row>*:nth-child(6){animation-delay:175ms}.ref-kpi-row>*:nth-child(7){animation-delay:210ms}
 @keyframes ta281TileIn{from{opacity:0;transform:translate3d(0,8px,0) scale(.985)}to{opacity:1;transform:none}}
 @media(hover:hover) and (pointer:fine){
-  .ref-kpi:hover,.ref-product:hover,.card:hover,.item:hover{transform:translate3d(0,-2px,0)!important;border-color:rgba(201,238,99,.19)!important;box-shadow:var(--ta281-shadow-hi)!important}
+  .ref-kpi:hover,.ref-product:hover,.card:hover,.item:hover{transform:translate3d(0,-3px,0)!important;border-color:rgba(201,238,99,.19)!important;box-shadow:var(--ta281-shadow-hi)!important}
 }
-button:active,.btn:active,.ref-cat:active,.ref-tool:active{transform:scale(.985)!important;transition-duration:80ms!important}
+button:active,.btn:active,.ref-cat:active,.ref-tool:active{transform:scale(.972)!important;transition-duration:80ms!important}
 .ref-kpi:active,.ref-product:active,.card:active{transform:scale(.988)!important;transition-duration:90ms!important}
-#top .ta-mobile-app-brand{animation:ta281LogoArrive 680ms var(--ta281-ease) both!important}
+#top .ta-mobile-app-brand{animation:ta281LogoArrive 850ms var(--ta281-ease) both!important}
 @keyframes ta281LogoArrive{0%{opacity:0;transform:perspective(120px) rotateY(-26deg) scale(.86);filter:brightness(.55)}60%{opacity:1;transform:perspective(120px) rotateY(3deg) scale(1.025)}100%{transform:none;filter:none}}
-#top .ta-mobile-app-brand::after{content:'';position:absolute;inset:4px;border-radius:10px;pointer-events:none;background:linear-gradient(110deg,transparent 20%,rgba(235,255,184,.24) 46%,transparent 72%);transform:translateX(-145%);mix-blend-mode:screen;animation:ta281LogoSweep 1050ms cubic-bezier(.22,.68,.2,1) 820ms 1 both}
-@keyframes ta281LogoSweep{0%{transform:translateX(-145%);opacity:0}24%{opacity:.10}58%{opacity:.34}100%{transform:translateX(145%);opacity:0}}
-#syncPill.syncing{animation:ta281SyncBreath 1.55s ease-in-out infinite!important}
+#top .ta-mobile-app-brand::after{content:'';position:absolute;inset:4px;border-radius:10px;pointer-events:none;background:linear-gradient(110deg,transparent 20%,rgba(235,255,174,.28) 46%,transparent 72%);transform:translateX(-145%);mix-blend-mode:screen;animation:ta281LogoSweep 7.4s ease-in-out 1.4s infinite}
+@keyframes ta281LogoSweep{0%,78%,100%{transform:translateX(-145%);opacity:0}82%{opacity:.18}88%{transform:translateX(145%);opacity:.42}92%{opacity:0}}
+#syncPill.syncing{animation:ta281SyncBreath 1.8s ease-in-out infinite!important}
 @keyframes ta281SyncBreath{0%,100%{box-shadow:inset 0 1px rgba(255,255,255,.018),0 0 0 rgba(201,238,99,0)}50%{box-shadow:inset 0 1px rgba(255,255,255,.028),0 0 22px -12px rgba(201,238,99,.42)}}
-
-/* ICONOGRAPHY / FEEDBACK — same controls, refined visual language */
-.cmdicon{width:20px;height:20px;display:grid;place-items:center;color:var(--ta281-neon)!important}
-.cmdicon svg{width:17px;height:17px;stroke-width:1.75}
-#tabs svg,.ta26-menu-ico svg,.ta253-quick i svg,.moreico svg,.ref-tool svg,.ref-search svg{stroke-width:1.75!important;vector-effect:non-scaling-stroke}
-#tabs>button>span:first-child{display:grid!important;place-items:center!important;transition:transform 180ms var(--ta281-ease),filter 180ms ease,color 180ms ease!important}
-#tabs>button.on>span:first-child{transform:translateY(-1px)!important;filter:drop-shadow(0 0 8px rgba(200,237,104,.20))!important}
-.ta26-menu-ico,.ta253-quick i,.moreico{background:linear-gradient(145deg,rgba(144,168,96,.10),rgba(255,255,255,.015))!important;border:1px solid rgba(205,229,177,.10)!important;box-shadow:inset 0 1px rgba(255,255,255,.026)!important}
-.ta26-menu-card:hover .ta26-menu-ico,.ta253-quick button:hover i,.moretile:hover .moreico{border-color:rgba(200,237,104,.24)!important;color:#daf183!important}
-.tbadge,.ta26-menu-badge{box-shadow:0 0 0 2px #07100a,0 6px 18px -8px rgba(201,238,99,.45)!important;font-variant-numeric:tabular-nums}
-
-/* Forms / feedback retain geometry; only finish and readability are refined. */
-label.f>span{color:#849087!important;letter-spacing:.115em!important}
-.inp,input.inp,textarea.inp,select.inp{transition:border-color 150ms ease,box-shadow 150ms ease,background 150ms ease!important}
-.inp:hover,input.inp:hover,textarea.inp:hover,select.inp:hover{border-color:rgba(217,237,197,.17)!important}
-.toast{background:linear-gradient(180deg,rgba(19,27,20,.985),rgba(10,16,12,.985))!important;border:1px solid rgba(210,233,184,.13)!important;box-shadow:inset 0 1px rgba(255,255,255,.025),0 20px 54px -30px #000!important;color:#e9eee8!important}
-.note{border:1px solid rgba(201,238,99,.10)!important;box-shadow:inset 0 1px rgba(255,255,255,.018)!important}
-:focus-visible{outline:2px solid rgba(201,238,99,.82)!important;outline-offset:3px!important}
-
-/* Product imagery gets depth only on real pointer devices; touch geometry is untouched. */
-.ref-real-photo{transition:transform 220ms var(--ta281-ease),filter 220ms ease!important}
-@media(hover:hover) and (pointer:fine){
-  .ref-product:hover .ref-real-photo{transform:translateY(-1px) scale(1.018)!important;filter:drop-shadow(0 14px 18px rgba(0,0,0,.30))!important}
-}
 
 /* MOBILE — strong redesign remains adaptive */
 @media(max-width:699px){
@@ -11556,7 +11349,7 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
     if(!root || root.querySelector(':scope > .ta281-catalog-hero')) return;
     const hero=document.createElement('div');
     hero.className='ta281-catalog-hero';
-    hero.innerHTML='<span class="ta281-catalog-ver">29.0.1</span><div class="ta281-catalog-kicker"><i></i>TRADE AGENT · INVENTORY CONTROL</div><h2>Каталог</h2><p>Ассортимент, наличие и быстрый заказ в одном рабочем пространстве</p>';
+    hero.innerHTML='<span class="ta281-catalog-ver">29.0.2</span><div class="ta281-catalog-kicker"><i></i>TRADE AGENT · INVENTORY CONTROL</div><h2>Каталог</h2><p>Ассортимент, наличие и быстрый заказ в одном рабочем пространстве</p>';
     root.insertBefore(hero,root.firstChild);
   }
   if(typeof vPrice23==='function'){
@@ -11576,7 +11369,7 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
 <!-- TA2802_DESKTOP_SHELL_FIX_START -->
 <style id="ta2802-desktop-shell-fix">
 /* =====================================================================
-   TRADE AGENT MANAGER 29.0.1 — DESKTOP SHELL / RESPONSIVE SYSTEM
+   TRADE AGENT MANAGER 28.0.2 — DESKTOP SHELL / RESPONSIVE FIX
    Authoritative desktop geometry. Mobile rules are intentionally untouched.
    Fixes the old split-brain state where a collapsed 68px rail still left
    #top/main offset by the legacy 270px rail.
@@ -11584,8 +11377,8 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
 @media (min-width:1024px){
   :root{
     --ta2802-rail:244px;
-    --ta2802-top:78px;
-    --ta2802-gutter:clamp(22px,2vw,36px);
+    --ta2802-top:80px;
+    --ta2802-gutter:clamp(22px,2.1vw,38px);
     --ta2802-content:1640px;
   }
   html.rail-collapsed{--ta2802-rail:76px}
@@ -11633,12 +11426,12 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
   #tabs .railbrand22{
     flex:0 0 auto!important;
     width:100%!important;
-    height:78px!important;
-    min-height:78px!important;
+    height:82px!important;
+    min-height:82px!important;
     margin:0 0 10px!important;
     padding:7px 7px 16px!important;
     display:grid!important;
-    grid-template-columns:46px minmax(0,1fr)!important;
+    grid-template-columns:48px minmax(0,1fr)!important;
     align-items:center!important;
     gap:12px!important;
     border-bottom:1px solid rgba(211,239,117,.085)!important;
@@ -11646,26 +11439,18 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
   }
   #tabs .railbrand22>.ta-brand-host,
   #tabs .railbrand22>.ta-brand-svg{
-    width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;
+    width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;
     display:grid!important;place-items:center!important;
     border-radius:14px!important;
     background:linear-gradient(145deg,rgba(168,198,88,.10),rgba(255,255,255,.018))!important;
     border:1px solid rgba(211,239,117,.105)!important;
     box-shadow:inset 0 1px rgba(255,255,255,.035),0 14px 30px -24px #000,0 0 24px -19px rgba(201,238,99,.35)!important;
   }
-  #tabs .railbrand22>.ta-brand-host .ta-brand-svg{width:38px!important;height:38px!important}
+  #tabs .railbrand22>.ta-brand-host .ta-brand-svg{width:39px!important;height:39px!important}
   #tabs .railbrand22>div{min-width:0!important;display:flex!important;flex-direction:column!important;justify-content:center!important;line-height:1!important}
-  #tabs .railbrand22>div b{display:block!important;font-size:13px!important;font-weight:850!important;letter-spacing:.105em!important;color:#f2f5ef!important;white-space:nowrap!important}
-  #tabs .railbrand22>div span{display:block!important;margin-top:6px!important;font-size:8px!important;font-weight:760!important;letter-spacing:.28em!important;color:#899687!important;white-space:nowrap!important}
+  #tabs .railbrand22>div b{display:block!important;font-size:13px!important;font-weight:850!important;letter-spacing:.115em!important;color:#f2f5ef!important;white-space:nowrap!important}
+  #tabs .railbrand22>div span{display:block!important;margin-top:7px!important;font-size:8px!important;font-weight:760!important;letter-spacing:.32em!important;color:#899687!important;white-space:nowrap!important}
 
-  #tabs>button>span:first-child,#tabs .ta26-rail-system button>span:first-child{
-    width:30px!important;height:30px!important;display:grid!important;place-items:center!important;
-    border-radius:9px!important;color:#879487!important;transition:background 160ms ease,color 160ms ease,box-shadow 160ms ease,transform 160ms cubic-bezier(.22,.82,.24,1)!important;
-  }
-  #tabs>button>span:first-child svg,#tabs .ta26-rail-system button>span:first-child svg{width:19px!important;height:19px!important;stroke-width:1.75!important}
-  #tabs>button:hover>span:first-child,#tabs .ta26-rail-system button:hover>span:first-child{background:rgba(255,255,255,.026)!important;color:#bcc7bb!important}
-  #tabs>button.on>span:first-child{background:linear-gradient(145deg,rgba(201,238,99,.11),rgba(201,238,99,.025))!important;color:#d9f17c!important;box-shadow:inset 0 1px rgba(255,255,255,.025),0 0 18px -12px rgba(201,238,99,.45)!important}
-  #refCollapse .rail-collapse-ico svg{width:18px!important;height:18px!important;stroke-width:1.8!important}
   #tabs>button,#tabs .ta26-rail-system button{
     flex:0 0 auto!important;
     width:100%!important;
@@ -11733,10 +11518,10 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
     min-height:var(--ta2802-top)!important;
     margin:0!important;
     padding:15px var(--ta2802-gutter)!important;
-    background:linear-gradient(180deg,rgba(6,10,7,.975),rgba(5,8,6,.94))!important;
+    background:linear-gradient(180deg,rgba(5,9,6,.965),rgba(4,8,5,.91))!important;
     border:0!important;
-    border-bottom:1px solid rgba(214,232,196,.085)!important;
-    box-shadow:0 18px 46px -43px #000,inset 0 1px rgba(255,255,255,.015)!important;
+    border-bottom:1px solid rgba(211,239,117,.09)!important;
+    box-shadow:0 18px 48px -45px #000!important;
   }
   #top .trow{width:100%!important;height:50px!important;min-height:50px!important;display:flex!important;align-items:center!important;gap:16px!important}
   #top .titleblock{display:block!important;min-width:0!important;flex:1 1 auto!important}
@@ -11792,8 +11577,8 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
   .ref-cats{display:flex!important;flex-wrap:wrap!important;overflow:visible!important;gap:8px!important;margin:0!important;padding:0!important}
   .ref-cat{min-height:42px!important;height:auto!important;padding:8px 13px!important;border-radius:12px!important}
 
-  .ref-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important;width:100%!important;align-items:stretch!important}
-  .ref-product.ref-card-v3{min-height:300px!important;border-radius:19px!important;grid-template-columns:minmax(0,1fr) 46px!important;padding:11px 0 11px 11px!important}
+  .ref-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important;width:100%!important;align-items:stretch!important}
+  .ref-product.ref-card-v3{min-height:292px!important;border-radius:18px!important;grid-template-columns:minmax(0,1fr) 46px!important;padding:11px 0 11px 11px!important}
   .ref-card-v3 .ref-product-main{padding-right:10px!important}
   .ref-card-v3 .ref-art{height:118px!important;min-height:118px!important;margin-bottom:7px!important;border-radius:13px!important}
   .ref-card-v3 .ref-art .ref-real-photo{max-height:112px!important;max-width:100%!important;object-fit:contain!important}
@@ -11831,13 +11616,13 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
 </style>
 
 <script id="ta2802-desktop-shell-migration">
-/* v29.0.1: stale collapsed rail from older desktop builds caused a narrow rail
+/* v28.0.2: stale collapsed rail from older desktop builds caused a 68px rail
    while legacy #top/main still stayed offset at 270px. The CSS above fixes
-   both states. On first 29.0.1 desktop run we open the rail once so the brand
+   both states. On first 28.0.2 desktop run we open the rail once so the brand
    lockup and labels are visible; the user can collapse it again afterwards. */
 (function(){
   try{
-    const key='ta29.0.1.desktopShellMigrated';
+    const key='ta28.0.2.desktopShellMigrated';
     if(window.matchMedia&&window.matchMedia('(min-width:1024px)').matches&&!localStorage.getItem(key)){
       document.documentElement.classList.remove('rail-collapsed');
       localStorage.setItem('ta23.rail','0');
@@ -11853,7 +11638,7 @@ label.f>span{color:#849087!important;letter-spacing:.115em!important}
 <!-- TA2803_IOS_DOCK_STABILITY_FIX_START -->
 <style id="ta2803-ios-dock-stability">
 /* =====================================================================
-   TRADE AGENT MANAGER 29.0.1 — iOS FIXED DOCK / LARGE IPHONE STABILITY
+   TRADE AGENT MANAGER 29.0.2 — STABLE GEOMETRY + PREMIUM RECOVERY
    The mobile dock is promoted out of #app to <body> at runtime on iOS.
    This avoids WebKit compositor/scroll-container drift seen on large iPhone
    viewports while preserving the exact existing visual design.
