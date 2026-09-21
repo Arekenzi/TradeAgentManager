@@ -9,13 +9,13 @@
 <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
 <meta content="no-cache" http-equiv="Pragma"/>
 <meta content="0" http-equiv="Expires"/>
-<meta content="29.1.3" name="app-version"/>
+<meta content="29.1.4" name="app-version"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="Trade Agent Manager" name="apple-mobile-web-app-title"/>
-<link href="./apple-touch-icon.png?v=29.1.3" rel="apple-touch-icon" sizes="180x180"/>
-<link href="./favicon.svg?v=29.1.3" rel="icon" type="image/svg+xml"/>
-<link href="./manifest.webmanifest?v=29.1.3" rel="manifest"/>
+<link href="./apple-touch-icon.png?v=29.1.4" rel="apple-touch-icon" sizes="180x180"/>
+<link href="./favicon.svg?v=29.1.4" rel="icon" type="image/svg+xml"/>
+<link href="./manifest.webmanifest?v=29.1.4" rel="manifest"/>
 <meta content="Артур Кудинов" name="author"/>
 <meta content="© 2026 Артур Кудинов. All rights reserved." name="copyright"/>
 <meta content="Trade Agent Manager" name="application-name"/>
@@ -314,7 +314,7 @@ table.t td.c-nm{overflow-wrap:anywhere;min-width:120px}
 .total b{font-family:var(--mono);font-size:19px;font-weight:750;letter-spacing:-.03em;white-space:nowrap}
 .total span{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:700}
 .total b{font-family:var(--mono);font-size:20px}
-.sums{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mut);padding:3px 0}
+.sums{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mut);padding:3px 0}.sums[data-o]>b{white-space:nowrap;flex:0 0 auto}.sums[data-o]>span{min-width:0}
 .plan{display:flex;flex-direction:column;gap:2px}
 .prow{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--soft)}
 .prow:last-child{border-bottom:0}
@@ -2627,7 +2627,7 @@ button,input,select,textarea{max-width:100%}
 .ta253-attn-summary{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;padding:10px 11px;margin-bottom:7px;border-radius:14px;border:1px solid rgba(255,255,255,.052);background:#0a130e}.ta253-attn-summary strong{font-size:11px}.ta253-attn-summary span{font-size:8.5px;color:#718078}.ta253-attn-summary.bad strong{color:#e8b96a}
 .ta253-attention{display:grid;grid-template-columns:1fr 1fr;gap:7px}.ta253-attention button{position:relative;text-align:left;padding:9px 10px;border-radius:13px;border:1px solid rgba(255,255,255,.052);background:#0a130e;min-height:52px;transition:transform .14s ease,border-color .14s ease}.ta253-attention button:active{transform:scale(.985)}.ta253-attention b{display:block;font:800 14px var(--mono);color:#e4ebe1}.ta253-attention span{display:block;margin-top:2px;font-size:8px;line-height:1.2;color:#6f7b72}.ta253-attention .warn b{color:#e7ba6c}.ta253-attention .hot b{color:#ef917f}.ta253-attention .ok b{color:#98ddb0}
 .ta253-quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.ta253-quick button{min-height:56px;display:flex;flex-direction:column;justify-content:center;gap:2px;text-align:left;padding:9px 10px;border-radius:13px;border:1px solid rgba(255,255,255,.055);background:#0c1510;color:#dfe7dd;transition:transform .14s ease,border-color .14s ease,background .14s ease}.ta253-quick button:active{transform:scale(.98)}.ta253-quick i{font-style:normal;font-size:14px;color:#cde766}.ta253-quick b{font-size:10px;line-height:1.12}.ta253-quick span{font-size:7.7px;line-height:1.15;color:#6e7b72}
-.ta253-list{display:grid;gap:6px}.ta253-order{width:100%;display:flex;align-items:center;gap:10px;text-align:left;padding:10px 11px;border-radius:13px;border:1px solid rgba(255,255,255,.05);background:#0a130e}.ta253-order .main{min-width:0;flex:1}.ta253-order .main>b{display:block;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ta253-order .main>span{display:block;margin-top:2px;font-size:8px;color:#6d7a71;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ta253-order strong{font:760 10px var(--mono);color:#dfe7dd;white-space:nowrap}.ta253-order strong.debt{color:#ef917f}.ta253-empty{padding:14px;text-align:center;border:1px dashed rgba(255,255,255,.055);border-radius:13px;color:#6b786f;font-size:9px}
+.ta253-list{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}.ta253-order{width:100%;min-width:0;display:flex;align-items:center;gap:10px;text-align:left;padding:10px 11px;border-radius:13px;border:1px solid rgba(255,255,255,.05);background:#0a130e}.ta253-order .main{min-width:0;flex:1}.ta253-order .main>b,.ta253-order .main>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ta253-order strong{flex:0 0 auto}.ta253-order .main>b{display:block;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ta253-order .main>span{display:block;margin-top:2px;font-size:8px;color:#6d7a71;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ta253-order strong{font:760 10px var(--mono);color:#dfe7dd;white-space:nowrap}.ta253-order strong.debt{color:#ef917f}.ta253-empty{padding:14px;text-align:center;border:1px dashed rgba(255,255,255,.055);border-radius:13px;color:#6b786f;font-size:9px}
 .ta253-home>*{animation:ta253Rise .28s cubic-bezier(.22,.82,.28,1) both}.ta253-home>*:nth-child(2){animation-delay:.025s}.ta253-home>*:nth-child(3){animation-delay:.05s}.ta253-home>*:nth-child(4){animation-delay:.075s}.ta253-home>*:nth-child(5){animation-delay:.1s}.ta253-home>*:nth-child(6){animation-delay:.125s}@keyframes ta253Rise{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 @media(max-width:390px){.ta253-quick{grid-template-columns:1fr 1fr}.ta253-quick button:last-child{grid-column:1/-1}.ta253-kpi b{font-size:15px}.ta253-hero h2{font-size:20px}}
 </style>
@@ -3432,7 +3432,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 </g>
 </svg></div>
 <div class="ref-login-word"><b>TRADE AGENT</b><span>MANAGER</span></div>
-<i id="loginVersion">v29.1.3</i>
+<i id="loginVersion">v29.1.4</i>
 </div>
 <div class="ref-login-hero">
 <div class="ref-orbit orbit-a"></div><div class="ref-orbit orbit-b"></div><div class="ref-orbit-runner runner-a"><span class="ref-orbit-dot d1"></span></div><div class="ref-orbit-runner runner-b"><span class="ref-orbit-dot d2"></span></div>
@@ -3488,7 +3488,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 <button class="lbtn loff hide" id="lOffline">Продолжить офлайн</button>
 <button class="login-config" id="lCfg">Настроить базу</button>
 </div>
-<div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v29.1.3</span></div>
+<div class="ref-login-foot"><span>© 2026 Trade Agent. Все права защищены.</span><span>TradeAgent Manager · v29.1.4</span></div>
 </div>
 </div>
 <script id="ta2538-login-x-gesture-lock">
@@ -3585,7 +3585,7 @@ const CATALOG = {"cats":["КРАСКА COLOREVO","Натуральные","На�
 const SNAPSHOT = {"date":"С 26.08.26 по 26.08.26","map":{"0180070":229,"10000":8,"10001":23,"10002":10,"10003":7,"10004":21,"10006":12,"11000":139,"11010":31,"11011":35,"11020":24,"12002":110,"13000":25,"13001":47,"13010":14,"13020":51,"13030":77,"13040":39,"13050":12,"14001":119,"14020":70,"15100":3,"15101":1,"15111":6,"15141":1,"15160":15,"15161":2,"15190":170,"15901":30,"1921":45,"1923":12,"52011":3,"52020":52,"52021":2,"52060":7,"52061":19,"52083":30,"52100":27,"52101":15,"52131":46,"52260":45,"52261":6,"52302":17,"52312":19,"58000":19,"58004":14,"58005":13,"58006":8,"58007":8,"58009":19,"58010":19,"58071":22,"58081":33,"58091":23,"58092":17,"58093":39,"581012":29,"581021":17,"581031":27,"58913":16,"58931":25,"58935":16,"59005":41,"62000":26,"62001":133,"62003":37,"62006":1,"70003":10,"70628":8,"70632":10,"70644":7,"70700":168,"70711":2,"70712":5,"70713":17,"70715":59,"70718":1,"70733":16,"70750":151,"70752":21,"70753":33,"70754":592,"70755":40,"70756":1,"70810":47,"70820":15,"70840":15,"72700":11,"72701":14,"72704":5,"72705":4,"72709":21,"76514":12,"78302":4,"78303":36,"78306":3,"800103":72,"82501":47,"82502":8,"82503":25,"82504":17,"82505":9,"82507":2,"82510":19,"82511":13,"82512":6,"82513":14,"82515":2,"82528":36,"82531":7,"82550":44,"82551":45,"82552":92,"82561":45,"82562":45,"82570":39,"82575":88,"82580":8,"82582":14,"82585":71,"83170":1,"83200":26,"83201":99,"83210":6,"83211":36,"83212s":61,"83231":21,"83241":58,"83261":24,"83262":9,"83301":23,"83302s":158,"83310":11,"83311":26,"83312s":150,"83321":5,"83341":924,"83400":12,"83401":14,"83410":2,"83411":70,"83461":43,"83462":7,"83472":37,"83500":20,"83501":52,"83502s":170,"83511":10,"83512s":170,"83572":3,"83601":44,"83681":71,"83682":26,"83711":36,"83750":148,"83761":29,"83781":71,"83782":11,"83800":6,"83801":16,"83803":9,"83804":74,"83820":9,"83821":11,"83823":28,"84001":102,"84004":93,"84005":159,"84008":431,"84009":33,"84010":26,"84045":116,"84051":83,"84063":8,"84064":28,"84065":3,"84067":28,"84071":99,"84081":44,"84083":2,"84086":51,"84091":62,"84092":12,"84093":4,"841000":2,"841003":2,"84101":6,"841011":10,"8410171":90,"84103":10,"84104":63,"841081":42,"84305":41,"84400":40,"844001":205,"84406":70,"84415":64,"84431":63,"84435":36,"84451":73,"84465":25,"84500":137,"845001":79,"84503":10,"84504":27,"84551":51,"84565":24,"84566":23,"84567":14,"84601":0,"84605":57,"84611":59,"84615":9,"84634":1,"84645":60,"84651":31,"84666":9,"84705":28,"84711":23,"84715":76,"84734":5,"84744":14,"84745":32,"84751":113,"84764":27,"84765":42,"84766":40,"84781":12,"84815":69,"84823":2,"84824":19,"84827":89,"84843":11,"84846":10,"84900":59,"849001":32,"8490010":159,"84901":40,"84902":35,"84903":34,"84904":35,"84905":11,"84906":15,"84911":80,"84917":56,"84998":59,"84999":45,"85010":127,"85030":80,"85040":78,"86465":27,"86803":12,"86903":16,"89001":4,"89004":21,"89005":1,"89008":119,"89010":14,"89011":16,"89055":19,"89063":30,"89064":9,"89067":17,"89071":5,"89072":14,"89073":23,"89074":17,"89081":1,"89084":9,"89093":17,"891000":50,"891001":10,"891011":1,"89300":13,"89371":28,"89400":6,"89451":14,"89505":30,"89551":8,"89566":24,"89605":22,"89623":8,"89634":14,"89635":12,"89666":19,"89705":11,"89713":18,"89731":9,"89734":12,"89744":22,"89751":30,"89766":26,"89800":24,"89823":19,"89831":23,"89913":18,"89950":16,"89952":52,"89960":25,"89961":30,"89962":40,"89963":27,"89964":30,"89966":18,"89994":32,"89995":5,"9138":6}};
 
 const VERSION_META=document.querySelector('meta[name=\"app-version\"]');
-let VERSION=(VERSION_META&&VERSION_META.content?VERSION_META.content.trim():'')||'29.1.3';
+let VERSION=(VERSION_META&&VERSION_META.content?VERSION_META.content.trim():'')||'29.1.4';
 const SCHEMA=2;
 const APP_OWNER='Артур Кудинов';
 const APP_FAMILY='Trade Agent Manager · Trade Agent · Flow System';
@@ -6509,7 +6509,7 @@ function sheet(title,html,after){
   $('#sheet').classList.add('on'); document.body.style.overflow='hidden';
   after&&after($('#shBody'));
 }
-function closeSheet(){ try{closeOrderActionSheet()}catch(e){} $('#sheet').classList.remove('on'); document.body.style.overflow=''; }
+function closeSheet(){ try{closeOrderActionSheet()}catch(e){} $('#sheet').classList.remove('on'); document.body.style.overflow=''; try{const a=ta2535AndroidAppScroll(); if(a)a.style.removeProperty('overflow-y');}catch(_){} }
 
 /* Забирает свежий файл приложения. Данные не трогает: они привязаны к адресу сайта. */
 let UPDATE_RELOADING=false;
@@ -7319,7 +7319,7 @@ $('#lCfg').addEventListener('click',async()=>{
 });
 $('#lPass').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});
 $('#lPass2').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});
-$('#shX').addEventListener('click',closeSheet);
+$('#shX').addEventListener('click',()=>closeSheet());
 $('#dvX').addEventListener('click',closeDoc);
 $('#dvPrint').addEventListener('click',()=>{ try{ window.print(); }
   catch(e){ toast('Печать недоступна — нажмите «Скачать»'); } });
@@ -8825,7 +8825,7 @@ function ta252GlobalSearch(){
 }
 const ta252EnsureChromeBase=ensureChrome22;
 ensureChrome22=function(){ta252EnsureChromeBase();const who=document.querySelector('#top .who');if(who&&!document.getElementById('ta252Search')){const b=document.createElement('button');b.id='ta252Search';b.setAttribute('aria-label','Поиск по системе');b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">${ICON.search}</svg>`;const bell=document.getElementById('ta22Bell');who.insertBefore(b,bell||who.firstChild);b.onclick=ta252GlobalSearch}}
-paintTop=function(){const titles={home:'Главная',price:'Каталог',cart:'Новый заказ',orders:'Заявки',debts:'Долги',ret:'Возвраты',clients:'Клиенты',reports:'Отчеты',stats:'Отчеты',users:'Пользователи',audit:'Журнал действий',admin:'Настройки'};$('#vTitle').textContent=titles[VIEW]||'Trade Agent';const sub=$('#topSub');if(sub){const st=syncState();sub.textContent=(isAdmin()?'ADMIN CONTROL':'FIELD SALES')+' · '+String(st.txt||'').toUpperCase()}$('#sDate').textContent=(DB.stock.date||'нет').replace(/^С\s+/i,'').replace(/\s*по\s+.*$/i,'');$('#sDot').className='dt'+(Date.now()-(DB.stock.at||0)>6048e5?' old':'');$('#meBtn').textContent=ME?(ME.id==='admin'?'АД':ta22Initials(ME.name)):'—';ensureChrome22();paintSync();document.documentElement.style.setProperty('--toph',$('#top').offsetHeight+'px')};
+paintTop=function(){const titles={home:'Главная',price:'Каталог',cart:'Заказ',orders:'Заявки',debts:'Долги',ret:'Возвраты',clients:'Клиенты',reports:'Отчеты',stats:'Отчеты',users:'Пользователи',audit:'Журнал действий',admin:'Настройки'};$('#vTitle').textContent=titles[VIEW]||'Trade Agent';const sub=$('#topSub');if(sub){const st=syncState();sub.textContent=(isAdmin()?'ADMIN CONTROL':'FIELD SALES')+' · '+String(st.txt||'').toUpperCase()}$('#sDate').textContent=(DB.stock.date||'нет').replace(/^С\s+/i,'').replace(/\s*по\s+.*$/i,'');$('#sDot').className='dt'+(Date.now()-(DB.stock.at||0)>6048e5?' old':'');$('#meBtn').textContent=ME?(ME.id==='admin'?'АД':ta22Initials(ME.name)):'—';ensureChrome22();paintSync();document.documentElement.style.setProperty('--toph',$('#top').offsetHeight+'px')};
 function ta252Nav(){const base=[['home','Главная','home'],['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['debts','Долги','debt'],['clients','Клиенты','clients'],['ret','Возвраты','back'],['reports','Отчеты','report']];if(isAdmin())base.push(['users','Пользователи','users'],['audit','Журнал действий','audit'],['admin','Настройки','settings']);return base}
 paintTabs=function(){if(!ME)return;const desktop=window.matchMedia&&window.matchMedia('(min-width:1024px)').matches;if(desktop){const n=ta252Nav();$('#tabs').innerHTML=`<div class="railbrand22"><span class="ta-brand-host">${TA23MARK}</span><div><b>TRADE AGENT</b><span>MANAGER</span></div></div>${n.map(([id,label,ic])=>`<button data-tab="${id}" class="${VIEW===id||(id==='reports'&&VIEW==='stats')?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')}<button id="refCollapse"><span><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6"/></svg></span><span>Свернуть</span></button>`;$('#refCollapse').onclick=()=>{const on=document.documentElement.classList.toggle('rail-collapsed');localStorage.setItem('ta23.rail',on?'1':'0')};return}const ids=[['home','Главная','home'],['price','Каталог','price'],['cart','Заказ','order'],['orders','Заявки','list'],['more','Меню','more']];const sec=['debts','ret','clients','reports','stats','users','audit','admin'].includes(VIEW);$('#tabs').innerHTML=ids.map(([id,label,ic])=>`<button data-tab="${id}" class="${id==='more'?sec:VIEW===id?'on':''}"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON[ic]}</svg></span><span>${label}</span></button>`).join('')};
 moreNav=function(){const items=[['debts','Долги','debt'],['clients','Клиенты','clients'],['ret','Возвраты','back'],['reports','Отчеты','report']];if(isAdmin())items.push(['users','Пользователи','users'],['audit','Журнал','audit'],['admin','Настройки','settings']);sheet('Разделы',`<div class="moregrid">${items.map(([id,label,ic])=>`<button class="moretile" data-more252="${id}"><span class="moreico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON[ic]}</svg>${navBadge(id)?`<i class="tbadge">${navBadge(id)}</i>`:''}</span><b>${label}</b></button>`).join('')}<button class="moretile" data-more252="search"><span class="moreico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${ICON.search}</svg></span><b>Поиск</b></button><button class="moretile" data-more252="sync"><span class="moreico"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6v5h-5"/><path d="M19 11a7.5 7.5 0 1 0 .2 3"/></svg></span><b>Синхронизация</b></button><button class="moretile" data-more252="profile"><span class="moreico"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span><b>Профиль</b></button><button class="moretile" data-more252="about"><span class="moreico">${TA25_TMARK}</span><b>О системе</b></button></div>`,el=>el.querySelectorAll('[data-more252]').forEach(b=>b.onclick=()=>{const id=b.dataset.more252;closeSheet();if(id==='sync')return setTimeout(vSync,120);if(id==='search')return setTimeout(ta252GlobalSearch,120);if(id==='profile')return setTimeout(()=>$('#meBtn').click(),120);if(id==='about')return setTimeout(vAbout,120);setTimeout(()=>go(id),80)}))};
@@ -8915,7 +8915,12 @@ try{
   go=function(v){
     const r=ta2535GoBase(v);
     const a=ta2535AndroidAppScroll();
-    if(a){a.scrollTop=0;a.scrollLeft=0}
+    if(a){
+      a.scrollTop=0;a.scrollLeft=0;
+      /* страховка: если лист не открыт, блокировки прокрутки быть не должно */
+      const sh=document.getElementById('sheet');
+      if(!sh||!sh.classList.contains('on')) a.style.removeProperty('overflow-y');
+    }
     return r;
   };
 }catch(_){}
@@ -10628,6 +10633,9 @@ img,video,canvas{max-width:100%}
   #top .titleblock>.ta-mobile-app-brand>.ta-brand-svg{width:24px!important;height:24px!important}
   #top .titleblock>.ttl{font-size:16px!important}
 }
+
+/* v29.1.4 — узкие экраны: заголовок экрана важнее даты остатков */
+@media (max-width:380px){ #top #stockPill{display:none!important} html body #app #top .who{grid-template-columns:repeat(3,auto)!important} }
 </style>
 <style id="ta2800-premium-design-system">
 /* =====================================================================
@@ -11222,7 +11230,7 @@ button:active,.btn:active,.ref-cat:active,.ref-tool:active{transform:scale(.972)
     if(!root || root.querySelector(':scope > .ta281-catalog-hero')) return;
     const hero=document.createElement('div');
     hero.className='ta281-catalog-hero';
-    hero.innerHTML='<span class="ta281-catalog-ver">29.1.3</span><div class="ta281-catalog-kicker"><i></i>TRADE AGENT · INVENTORY CONTROL</div><h2>Каталог</h2><p>Ассортимент, наличие и быстрый заказ в одном рабочем пространстве</p>';
+    hero.innerHTML='<span class="ta281-catalog-ver">'+(typeof VERSION!=='undefined'?VERSION:'')+'</span><div class="ta281-catalog-kicker"><i></i>TRADE AGENT · INVENTORY CONTROL</div><h2>Каталог</h2><p>Ассортимент, наличие и быстрый заказ в одном рабочем пространстве</p>';
     root.insertBefore(hero,root.firstChild);
   }
   if(typeof vPrice23==='function'){
